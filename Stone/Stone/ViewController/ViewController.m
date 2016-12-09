@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    @TODO("有些事，我都已忘记");
+    @TODO("但我现在还记得");
+    @TODO("那是一个晚上，我的母亲问我");
+    @TODO("今天怎~么~不开心？");
     // Do any additional setup after loading the view, typically from a nib.
 }
 
