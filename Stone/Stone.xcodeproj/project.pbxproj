@@ -13,6 +13,8 @@
 		16244D3F1DF7B8D200EF6BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16244D3E1DF7B8D200EF6BDB /* Assets.xcassets */; };
 		16244D421DF7B8D200EF6BDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16244D401DF7B8D200EF6BDB /* LaunchScreen.storyboard */; };
 		16244D7A1DF7BBC900EF6BDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16244D791DF7BBC900EF6BDB /* ViewController.m */; };
+		168CB6461DFEB4850062804B /* ViewControllerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CB6451DFEB4850062804B /* ViewControllerA.m */; };
+		168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CB64E1E00F6A30062804B /* NSString+MD5.m */; };
 		16D412BB1DFABEB700A33ADC /* UIButton+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412AA1DFABEB700A33ADC /* UIButton+Style.m */; };
 		16D412BC1DFABEB700A33ADC /* UIColor+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412AC1DFABEB700A33ADC /* UIColor+Style.m */; };
 		16D412BD1DFABEB700A33ADC /* UIFont+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412AE1DFABEB700A33ADC /* UIFont+Style.m */; };
@@ -21,6 +23,7 @@
 		16D412C01DFABEB700A33ADC /* UIView+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B41DFABEB700A33ADC /* UIView+Style.m */; };
 		16D412C11DFABEB700A33ADC /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B61DFABEB700A33ADC /* NSArray+Log.m */; };
 		16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */; };
+		B926192ED5ECD5AC62981E26 /* libPods-Stone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 157C7BD9455872946F42C141 /* libPods-Stone.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		157C7BD9455872946F42C141 /* libPods-Stone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Stone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16244D2F1DF7B8D200EF6BDB /* Stone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16244D331DF7B8D200EF6BDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16244D351DF7B8D200EF6BDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +58,10 @@
 		16244D761DF7B9A500EF6BDB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		16244D781DF7BBC900EF6BDB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		16244D791DF7BBC900EF6BDB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		168CB6441DFEB4850062804B /* ViewControllerA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerA.h; sourceTree = "<group>"; };
+		168CB6451DFEB4850062804B /* ViewControllerA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerA.m; sourceTree = "<group>"; };
+		168CB64D1E00F6A30062804B /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		168CB64E1E00F6A30062804B /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		16D412A81DFABEB700A33ADC /* AJKCategoryStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJKCategoryStyle.h; sourceTree = "<group>"; };
 		16D412A91DFABEB700A33ADC /* UIButton+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Style.h"; sourceTree = "<group>"; };
 		16D412AA1DFABEB700A33ADC /* UIButton+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Style.m"; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 		16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 		16D412BA1DFABEB700A33ADC /* TodoMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoMacro.h; sourceTree = "<group>"; };
 		16D412C31DFABF0300A33ADC /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		6DEF56D403682A71F3BA4437 /* Pods-Stone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stone/Pods-Stone.debug.xcconfig"; sourceTree = "<group>"; };
+		C97E6924C19819B15D75E944 /* Pods-Stone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stone/Pods-Stone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B926192ED5ECD5AC62981E26 /* libPods-Stone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +116,8 @@
 			children = (
 				16244D311DF7B8D200EF6BDB /* Stone */,
 				16244D301DF7B8D200EF6BDB /* Products */,
+				B02FC299998AC42AB9A2FC7F /* Pods */,
+				C17704C7DE1E974B11A090CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +162,8 @@
 			children = (
 				16244D781DF7BBC900EF6BDB /* ViewController.h */,
 				16244D791DF7BBC900EF6BDB /* ViewController.m */,
+				168CB6441DFEB4850062804B /* ViewControllerA.h */,
+				168CB6451DFEB4850062804B /* ViewControllerA.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -161,6 +176,8 @@
 				16D412B61DFABEB700A33ADC /* NSArray+Log.m */,
 				16D412B71DFABEB700A33ADC /* NSDictionary+Log.h */,
 				16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */,
+				168CB64D1E00F6A30062804B /* NSString+MD5.h */,
+				168CB64E1E00F6A30062804B /* NSString+MD5.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -194,6 +211,23 @@
 			path = Macro;
 			sourceTree = "<group>";
 		};
+		B02FC299998AC42AB9A2FC7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DEF56D403682A71F3BA4437 /* Pods-Stone.debug.xcconfig */,
+				C97E6924C19819B15D75E944 /* Pods-Stone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C17704C7DE1E974B11A090CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				157C7BD9455872946F42C141 /* libPods-Stone.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16244D5C1DF7B8D200EF6BDB /* Build configuration list for PBXNativeTarget "Stone" */;
 			buildPhases = (
+				792097C6E1C7F160F66D9510 /* [CP] Check Pods Manifest.lock */,
 				16244D2B1DF7B8D200EF6BDB /* Sources */,
 				16244D2C1DF7B8D200EF6BDB /* Frameworks */,
 				16244D2D1DF7B8D200EF6BDB /* Resources */,
+				C11B4CD3FFBE875DE61555CD /* [CP] Embed Pods Frameworks */,
+				1052B78681E344700DEA3FC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +293,7 @@
 		16244D271DF7B8D200EF6BDB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SY;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Stone.Yu;
 				TargetAttributes = {
@@ -322,6 +360,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1052B78681E344700DEA3FC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stone/Pods-Stone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		792097C6E1C7F160F66D9510 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C11B4CD3FFBE875DE61555CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stone/Pods-Stone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16244D2B1DF7B8D200EF6BDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -333,8 +419,10 @@
 				16D412BD1DFABEB700A33ADC /* UIFont+Style.m in Sources */,
 				16D412C01DFABEB700A33ADC /* UIView+Style.m in Sources */,
 				16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */,
+				168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */,
 				16D412C11DFABEB700A33ADC /* NSArray+Log.m in Sources */,
 				16244D371DF7B8D200EF6BDB /* AppDelegate.m in Sources */,
+				168CB6461DFEB4850062804B /* ViewControllerA.m in Sources */,
 				16244D341DF7B8D200EF6BDB /* main.m in Sources */,
 				16D412BE1DFABEB700A33ADC /* UILabel+Style.m in Sources */,
 				16D412BC1DFABEB700A33ADC /* UIColor+Style.m in Sources */,
@@ -482,6 +570,7 @@
 		};
 		16244D5D1DF7B8D200EF6BDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DEF56D403682A71F3BA4437 /* Pods-Stone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -495,6 +584,7 @@
 		};
 		16244D5E1DF7B8D200EF6BDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C97E6924C19819B15D75E944 /* Pods-Stone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
