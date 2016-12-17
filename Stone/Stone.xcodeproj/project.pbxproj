@@ -13,8 +13,9 @@
 		16244D3F1DF7B8D200EF6BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16244D3E1DF7B8D200EF6BDB /* Assets.xcassets */; };
 		16244D421DF7B8D200EF6BDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16244D401DF7B8D200EF6BDB /* LaunchScreen.storyboard */; };
 		16244D7A1DF7BBC900EF6BDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16244D791DF7BBC900EF6BDB /* ViewController.m */; };
-		168CB6461DFEB4850062804B /* ViewControllerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CB6451DFEB4850062804B /* ViewControllerA.m */; };
 		168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CB64E1E00F6A30062804B /* NSString+MD5.m */; };
+		16C8B7A51E052B4E00B6C64A /* SYThreadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C8B7A41E052B4E00B6C64A /* SYThreadOperation.m */; };
+		16C8B7AB1E05383800B6C64A /* SYThreadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */; };
 		16D412BB1DFABEB700A33ADC /* UIButton+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412AA1DFABEB700A33ADC /* UIButton+Style.m */; };
 		16D412BC1DFABEB700A33ADC /* UIColor+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412AC1DFABEB700A33ADC /* UIColor+Style.m */; };
 		16D412BD1DFABEB700A33ADC /* UIFont+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412AE1DFABEB700A33ADC /* UIFont+Style.m */; };
@@ -26,23 +27,6 @@
 		B926192ED5ECD5AC62981E26 /* libPods-Stone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 157C7BD9455872946F42C141 /* libPods-Stone.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		16244D491DF7B8D200EF6BDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16244D271DF7B8D200EF6BDB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 16244D2E1DF7B8D200EF6BDB;
-			remoteInfo = Stone;
-		};
-		16244D541DF7B8D200EF6BDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16244D271DF7B8D200EF6BDB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 16244D2E1DF7B8D200EF6BDB;
-			remoteInfo = Stone;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		157C7BD9455872946F42C141 /* libPods-Stone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Stone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16244D2F1DF7B8D200EF6BDB /* Stone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,15 +37,15 @@
 		16244D3E1DF7B8D200EF6BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16244D411DF7B8D200EF6BDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16244D431DF7B8D200EF6BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16244D481DF7B8D200EF6BDB /* StoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		16244D531DF7B8D200EF6BDB /* StoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16244D761DF7B9A500EF6BDB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		16244D781DF7BBC900EF6BDB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		16244D791DF7BBC900EF6BDB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		168CB6441DFEB4850062804B /* ViewControllerA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerA.h; sourceTree = "<group>"; };
-		168CB6451DFEB4850062804B /* ViewControllerA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerA.m; sourceTree = "<group>"; };
 		168CB64D1E00F6A30062804B /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		168CB64E1E00F6A30062804B /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		16C8B7A31E052B4E00B6C64A /* SYThreadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYThreadOperation.h; sourceTree = "<group>"; };
+		16C8B7A41E052B4E00B6C64A /* SYThreadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYThreadOperation.m; sourceTree = "<group>"; };
+		16C8B7A91E05383800B6C64A /* SYThreadTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYThreadTestViewController.h; sourceTree = "<group>"; };
+		16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYThreadTestViewController.m; sourceTree = "<group>"; };
 		16D412A81DFABEB700A33ADC /* AJKCategoryStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJKCategoryStyle.h; sourceTree = "<group>"; };
 		16D412A91DFABEB700A33ADC /* UIButton+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Style.h"; sourceTree = "<group>"; };
 		16D412AA1DFABEB700A33ADC /* UIButton+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Style.m"; sourceTree = "<group>"; };
@@ -94,20 +78,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16244D451DF7B8D200EF6BDB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16244D501DF7B8D200EF6BDB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -125,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				16244D2F1DF7B8D200EF6BDB /* Stone.app */,
-				16244D481DF7B8D200EF6BDB /* StoneTests.xctest */,
-				16244D531DF7B8D200EF6BDB /* StoneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +102,7 @@
 		16244D311DF7B8D200EF6BDB /* Stone */ = {
 			isa = PBXGroup;
 			children = (
+				16C8B7A21E052AD500B6C64A /* Thread */,
 				16D412A61DFABEB700A33ADC /* Categories */,
 				16D412B91DFABEB700A33ADC /* Macro */,
 				16244D771DF7BBC900EF6BDB /* ViewController */,
@@ -162,10 +131,19 @@
 			children = (
 				16244D781DF7BBC900EF6BDB /* ViewController.h */,
 				16244D791DF7BBC900EF6BDB /* ViewController.m */,
-				168CB6441DFEB4850062804B /* ViewControllerA.h */,
-				168CB6451DFEB4850062804B /* ViewControllerA.m */,
+				16C8B7A91E05383800B6C64A /* SYThreadTestViewController.h */,
+				16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		16C8B7A21E052AD500B6C64A /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				16C8B7A31E052B4E00B6C64A /* SYThreadOperation.h */,
+				16C8B7A41E052B4E00B6C64A /* SYThreadOperation.m */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 		16D412A61DFABEB700A33ADC /* Categories */ = {
@@ -251,42 +229,6 @@
 			productReference = 16244D2F1DF7B8D200EF6BDB /* Stone.app */;
 			productType = "com.apple.product-type.application";
 		};
-		16244D471DF7B8D200EF6BDB /* StoneTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16244D5F1DF7B8D200EF6BDB /* Build configuration list for PBXNativeTarget "StoneTests" */;
-			buildPhases = (
-				16244D441DF7B8D200EF6BDB /* Sources */,
-				16244D451DF7B8D200EF6BDB /* Frameworks */,
-				16244D461DF7B8D200EF6BDB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				16244D4A1DF7B8D200EF6BDB /* PBXTargetDependency */,
-			);
-			name = StoneTests;
-			productName = StoneTests;
-			productReference = 16244D481DF7B8D200EF6BDB /* StoneTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		16244D521DF7B8D200EF6BDB /* StoneUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16244D621DF7B8D200EF6BDB /* Build configuration list for PBXNativeTarget "StoneUITests" */;
-			buildPhases = (
-				16244D4F1DF7B8D200EF6BDB /* Sources */,
-				16244D501DF7B8D200EF6BDB /* Frameworks */,
-				16244D511DF7B8D200EF6BDB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				16244D551DF7B8D200EF6BDB /* PBXTargetDependency */,
-			);
-			name = StoneUITests;
-			productName = StoneUITests;
-			productReference = 16244D531DF7B8D200EF6BDB /* StoneUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -300,16 +242,6 @@
 					16244D2E1DF7B8D200EF6BDB = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
-					};
-					16244D471DF7B8D200EF6BDB = {
-						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 16244D2E1DF7B8D200EF6BDB;
-					};
-					16244D521DF7B8D200EF6BDB = {
-						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 16244D2E1DF7B8D200EF6BDB;
 					};
 				};
 			};
@@ -327,8 +259,6 @@
 			projectRoot = "";
 			targets = (
 				16244D2E1DF7B8D200EF6BDB /* Stone */,
-				16244D471DF7B8D200EF6BDB /* StoneTests */,
-				16244D521DF7B8D200EF6BDB /* StoneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -341,20 +271,6 @@
 				16244D421DF7B8D200EF6BDB /* LaunchScreen.storyboard in Resources */,
 				16244D3F1DF7B8D200EF6BDB /* Assets.xcassets in Resources */,
 				16244D3D1DF7B8D200EF6BDB /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16244D461DF7B8D200EF6BDB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16244D511DF7B8D200EF6BDB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,47 +332,21 @@
 				16D412BF1DFABEB700A33ADC /* UIView+LayerStyle.m in Sources */,
 				16244D7A1DF7BBC900EF6BDB /* ViewController.m in Sources */,
 				16D412BB1DFABEB700A33ADC /* UIButton+Style.m in Sources */,
+				16C8B7A51E052B4E00B6C64A /* SYThreadOperation.m in Sources */,
 				16D412BD1DFABEB700A33ADC /* UIFont+Style.m in Sources */,
 				16D412C01DFABEB700A33ADC /* UIView+Style.m in Sources */,
+				16C8B7AB1E05383800B6C64A /* SYThreadTestViewController.m in Sources */,
 				16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */,
 				168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */,
 				16D412C11DFABEB700A33ADC /* NSArray+Log.m in Sources */,
 				16244D371DF7B8D200EF6BDB /* AppDelegate.m in Sources */,
-				168CB6461DFEB4850062804B /* ViewControllerA.m in Sources */,
 				16244D341DF7B8D200EF6BDB /* main.m in Sources */,
 				16D412BE1DFABEB700A33ADC /* UILabel+Style.m in Sources */,
 				16D412BC1DFABEB700A33ADC /* UIColor+Style.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16244D441DF7B8D200EF6BDB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16244D4F1DF7B8D200EF6BDB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		16244D4A1DF7B8D200EF6BDB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 16244D2E1DF7B8D200EF6BDB /* Stone */;
-			targetProxy = 16244D491DF7B8D200EF6BDB /* PBXContainerItemProxy */;
-		};
-		16244D551DF7B8D200EF6BDB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 16244D2E1DF7B8D200EF6BDB /* Stone */;
-			targetProxy = 16244D541DF7B8D200EF6BDB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		16244D3B1DF7B8D200EF6BDB /* Main.storyboard */ = {
@@ -596,52 +486,6 @@
 			};
 			name = Release;
 		};
-		16244D601DF7B8D200EF6BDB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = StoneTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stone.StoneTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stone.app/Stone";
-			};
-			name = Debug;
-		};
-		16244D611DF7B8D200EF6BDB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = StoneTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stone.StoneTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stone.app/Stone";
-			};
-			name = Release;
-		};
-		16244D631DF7B8D200EF6BDB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = StoneUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stone.StoneUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Stone;
-			};
-			name = Debug;
-		};
-		16244D641DF7B8D200EF6BDB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = StoneUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stone.StoneUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Stone;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -659,24 +503,6 @@
 			buildConfigurations = (
 				16244D5D1DF7B8D200EF6BDB /* Debug */,
 				16244D5E1DF7B8D200EF6BDB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		16244D5F1DF7B8D200EF6BDB /* Build configuration list for PBXNativeTarget "StoneTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				16244D601DF7B8D200EF6BDB /* Debug */,
-				16244D611DF7B8D200EF6BDB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		16244D621DF7B8D200EF6BDB /* Build configuration list for PBXNativeTarget "StoneUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				16244D631DF7B8D200EF6BDB /* Debug */,
-				16244D641DF7B8D200EF6BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

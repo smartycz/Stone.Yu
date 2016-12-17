@@ -7,26 +7,30 @@
 //
 
 #import "ViewController.h"
-#import "ViewControllerA.h"
 
-@interface ViewController ()
+static const NSString *ViewControllerThreadTest = @"SYThreadTestViewController";
 
-@property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UIButton *reloadImageButton;
-@property (nonatomic, strong) UIButton *refreshImageButton;
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray <NSDictionary *>*dataArray;
 
 @end
 
 @implementation ViewController
 
+- (void)initView
+{
+    [self.navigationItem setTitle:@"主页"];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    [self.view addSubview:self.tableView];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-
-    [self.view addSubview:self.imageView];
-    [self.view addSubview:self.reloadImageButton];
-    [self.view addSubview:self.refreshImageButton];
+    [self initView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,56 +40,64 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    
-    [self.reloadImageButton centerXEqualToView:self.imageView];
-    [self.reloadImageButton setTop:self.imageView.bottom + 10];
-    
-    [self.refreshImageButton centerXEqualToView:self.imageView];
-    [self.refreshImageButton setTop:self.reloadImageButton.bottom + 10];
 }
 
-- (UIImageView *)imageView
+#pragma mark - Private Method
+- (void)gotoViewController:(NSIndexPath *)indexPath
 {
-    if (nil == _imageView) {
-        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 70, 100, 100)];
-        [_imageView setBackgroundColor:[UIColor grayColor]];
-        [self.imageView sd_setImageWithURL:[NSURL URLWithString:@"https://of4jd0bcc.qnssl.com/%E5%9B%BA%E5%AE%9A%E9%93%BE%E6%8E%A5%E6%9B%B4%E6%94%B9.jpg"]];
+    NSDictionary *dic = self.dataArray[indexPath.row];
+    NSString *classString = dic.allKeys[0];
+    
+    UIViewController *viewController = [[NSClassFromString(classString) alloc] init];
+    [viewController.navigationItem setTitle:dic[classString]];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark - UITableViewDataSource And UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.dataArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    if (nil == cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([UITableViewCell class])];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    return _imageView;
+    [cell.textLabel setTextFont:[UIFont H18Font] textColor:[UIColor blueColor] text:self.dataArray[indexPath.row].allValues[0]];
+    
+    return cell;
 }
 
-- (void)reloadImage
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[SDImageCache sharedImageCache] clearMemory];
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:@"https://of4jd0bcc.qnssl.com/%E5%9B%BA%E5%AE%9A%E9%93%BE%E6%8E%A5%E6%9B%B4%E6%94%B9.jpg"]];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self gotoViewController:indexPath];
 }
 
-- (void)refreshImage
-{
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:@"https://of4jd0bcc.qnssl.com/%E5%9B%BA%E5%AE%9A%E9%93%BE%E6%8E%A5%E6%9B%B4%E6%94%B9.jpg"]];
-}
+#pragma mark - Getter And Setter
 
-- (UIButton *)reloadImageButton
+- (UITableView *)tableView
 {
-    if (nil == _reloadImageButton) {
-        _reloadImageButton = [UIButton buttonWithTitleFont:[UIFont H18Font] titleColor:[UIColor lightTextColor] title:@"重新加载图片" backgroundColor:[UIColor grayColor]];
-        [_reloadImageButton sizeToFit];
-        [_reloadImageButton addTarget:self action:@selector(reloadImage) forControlEvents:UIControlEventTouchUpInside];
+    if (nil == _tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+        [_tableView setDataSource:self];
+        [_tableView setDelegate:self];
     }
     
-    return _reloadImageButton;
+    return _tableView;
 }
 
-- (UIButton *)refreshImageButton
+- (NSArray *)dataArray
 {
-    if (nil == _refreshImageButton) {
-        _refreshImageButton = [UIButton buttonWithTitleFont:[UIFont H18Font] titleColor:[UIColor lightTextColor] title:@"刷新加载图片" backgroundColor:[UIColor grayColor]];
-        [_refreshImageButton sizeToFit];
-        [_refreshImageButton addTarget:self action:@selector(refreshImage) forControlEvents:UIControlEventTouchUpInside];
-    }
-    
-    return _refreshImageButton;
+    return @[
+             @{ViewControllerThreadTest : @"多线程"}
+             ];
 }
 
 @end
