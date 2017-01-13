@@ -101,10 +101,10 @@ static const NSString *SelectorUseBarrierAsync = @"useBarrierAsync";
             [[SYThreadOperation sharedOperation] currentThreadSleep:2];
             NSLog(@"\ni = %d 当前线程：%@", i, [[SYThreadOperation sharedOperation] getCurrentThread]);
         });
-        NSLog(@"\ni = %d 执行完毕", i);
+        NSLog(@"\ni = %d 立即返回", i);
     }
     
-    NSLog(@"\n所有队列使用同步方式执行完毕");
+    NSLog(@"\n所有队列使用异步方式执行立即返回");
 }
 
 //异步执行串行队列
@@ -273,9 +273,14 @@ static const NSString *SelectorUseBarrierAsync = @"useBarrierAsync";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    static NSString *cellIdentifier = nil;
+    if (nil == cellIdentifier) {
+        cellIdentifier = NSStringFromClass([UITableViewCell class]);
+    }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([UITableViewCell class])];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     

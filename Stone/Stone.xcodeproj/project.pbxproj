@@ -13,6 +13,7 @@
 		16244D3F1DF7B8D200EF6BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16244D3E1DF7B8D200EF6BDB /* Assets.xcassets */; };
 		16244D421DF7B8D200EF6BDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16244D401DF7B8D200EF6BDB /* LaunchScreen.storyboard */; };
 		16244D7A1DF7BBC900EF6BDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16244D791DF7BBC900EF6BDB /* ViewController.m */; };
+		1635BA541E0940230074ABA1 /* SYRuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635BA531E0940230074ABA1 /* SYRuntimeTestViewController.m */; };
 		168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CB64E1E00F6A30062804B /* NSString+MD5.m */; };
 		16C8B7A51E052B4E00B6C64A /* SYThreadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C8B7A41E052B4E00B6C64A /* SYThreadOperation.m */; };
 		16C8B7AB1E05383800B6C64A /* SYThreadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */; };
@@ -40,6 +41,8 @@
 		16244D761DF7B9A500EF6BDB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		16244D781DF7BBC900EF6BDB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		16244D791DF7BBC900EF6BDB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1635BA521E0940230074ABA1 /* SYRuntimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYRuntimeTestViewController.h; sourceTree = "<group>"; };
+		1635BA531E0940230074ABA1 /* SYRuntimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYRuntimeTestViewController.m; sourceTree = "<group>"; };
 		168CB64D1E00F6A30062804B /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		168CB64E1E00F6A30062804B /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		16C8B7A31E052B4E00B6C64A /* SYThreadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYThreadOperation.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				16244D791DF7BBC900EF6BDB /* ViewController.m */,
 				16C8B7A91E05383800B6C64A /* SYThreadTestViewController.h */,
 				16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */,
+				1635BA521E0940230074ABA1 /* SYRuntimeTestViewController.h */,
+				1635BA531E0940230074ABA1 /* SYRuntimeTestViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1635BA541E0940230074ABA1 /* SYRuntimeTestViewController.m in Sources */,
 				16D412BF1DFABEB700A33ADC /* UIView+LayerStyle.m in Sources */,
 				16244D7A1DF7BBC900EF6BDB /* ViewController.m in Sources */,
 				16D412BB1DFABEB700A33ADC /* UIButton+Style.m in Sources */,
