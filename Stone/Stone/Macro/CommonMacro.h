@@ -17,4 +17,16 @@
 #define WEAK_SELF                           __weak __typeof(self)weakSelf = self;
 #define STRONG_SELF                         __strong __typeof(weakSelf)self = weakSelf;
 
+//Log
+#ifdef DEBUG
+#	define DebugLog(fmt, ...) NSLog((@"[%@]-%s #%d " fmt), [self class], __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#   define DebugSLog(fmt, ...) NSLog(fmt, __VA_ARGS__)
+#else
+#	define DebugLog(...)
+#   define DebugSLog(...)
+#endif
+
+//CString
+#define CStringToNSSting(A) [[NSString alloc] initWithCString:(A) encoding:NSUTF8StringEncoding]
+
 #endif /* CommonMacro_h */

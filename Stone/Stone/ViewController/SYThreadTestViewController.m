@@ -244,7 +244,7 @@ static const NSString *SelectorUseBarrierAsync = @"useBarrierAsync";
     
     for (int i = 0; i < 3; i++) {
         dispatch_async(queue, ^{
-            [[SYThreadOperation sharedOperation] currentThreadSleep:i];
+            [[SYThreadOperation sharedOperation] currentThreadSleep:2];
             NSLog(@"\ni = %d 执行完毕",i);
             NSLog(@"\n当前线程：%@ %d", [[SYThreadOperation sharedOperation] getCurrentThread], __LINE__);
         });
@@ -257,7 +257,7 @@ static const NSString *SelectorUseBarrierAsync = @"useBarrierAsync";
     
     for (int i = 0; i < 3; i++) {
         dispatch_async(queue, ^{
-            [[SYThreadOperation sharedOperation] currentThreadSleep:i];
+            [[SYThreadOperation sharedOperation] currentThreadSleep:2];
             NSLog(@"\ni = %d 执行完毕",i);
             NSLog(@"\n当前线程：%@ %d", [[SYThreadOperation sharedOperation] getCurrentThread], __LINE__);
         });
@@ -284,9 +284,12 @@ static const NSString *SelectorUseBarrierAsync = @"useBarrierAsync";
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
-    [cell.textLabel setTextFont:[UIFont H18Font] textColor:[UIColor blueColor] text:self.dataArray[indexPath.row].allValues[0]];
-    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell.textLabel setTextFont:[UIFont H18Font] textColor:[UIColor blueColor] text:self.dataArray[indexPath.row].allValues[0]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -321,6 +324,42 @@ static const NSString *SelectorUseBarrierAsync = @"useBarrierAsync";
 - (NSArray *)dataArray
 {
     return @[
+             @{SelectorNameSyncSeroalQueue : @"同步执行串行队列"},
+             @{SelectorNameSyncConcurrentQueue : @"同步执行并行队列"},
+             @{SelectorNameSyncMainQueue : @"同步执行主队列"},
+             @{SelectorNameAsyncSeroalQueue : @"异步执行串行队列"},
+             @{SelectorNameAsyncConcurrentQueue : @"异步执行并行队列"},
+             @{SelectorNamePerformGroupQueue : @"异步执行队列组"},
+             @{SelectorNamePerformGroupUseEnterAndLeave : @"自动管理异步队列组"},
+             @{SelectorNameSemaphoreLock : @"信号量锁测试"},
+             @{SelectorUseDispatchApply : @"循环执行队列"},
+             @{SelectorQueueSuspend : @"队列挂起与恢复"},
+             @{SelectorUseBarrierAsync : @"任务栅栏"},
+             
+             @{SelectorNameSyncSeroalQueue : @"同步执行串行队列"},
+             @{SelectorNameSyncConcurrentQueue : @"同步执行并行队列"},
+             @{SelectorNameSyncMainQueue : @"同步执行主队列"},
+             @{SelectorNameAsyncSeroalQueue : @"异步执行串行队列"},
+             @{SelectorNameAsyncConcurrentQueue : @"异步执行并行队列"},
+             @{SelectorNamePerformGroupQueue : @"异步执行队列组"},
+             @{SelectorNamePerformGroupUseEnterAndLeave : @"自动管理异步队列组"},
+             @{SelectorNameSemaphoreLock : @"信号量锁测试"},
+             @{SelectorUseDispatchApply : @"循环执行队列"},
+             @{SelectorQueueSuspend : @"队列挂起与恢复"},
+             @{SelectorUseBarrierAsync : @"任务栅栏"},
+             
+             @{SelectorNameSyncSeroalQueue : @"同步执行串行队列"},
+             @{SelectorNameSyncConcurrentQueue : @"同步执行并行队列"},
+             @{SelectorNameSyncMainQueue : @"同步执行主队列"},
+             @{SelectorNameAsyncSeroalQueue : @"异步执行串行队列"},
+             @{SelectorNameAsyncConcurrentQueue : @"异步执行并行队列"},
+             @{SelectorNamePerformGroupQueue : @"异步执行队列组"},
+             @{SelectorNamePerformGroupUseEnterAndLeave : @"自动管理异步队列组"},
+             @{SelectorNameSemaphoreLock : @"信号量锁测试"},
+             @{SelectorUseDispatchApply : @"循环执行队列"},
+             @{SelectorQueueSuspend : @"队列挂起与恢复"},
+             @{SelectorUseBarrierAsync : @"任务栅栏"},
+             
              @{SelectorNameSyncSeroalQueue : @"同步执行串行队列"},
              @{SelectorNameSyncConcurrentQueue : @"同步执行并行队列"},
              @{SelectorNameSyncMainQueue : @"同步执行主队列"},

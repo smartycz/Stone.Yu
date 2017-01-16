@@ -14,14 +14,19 @@
 
 @implementation SYRuntimeTestViewController
 
+- (void)initView
+{
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self initView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

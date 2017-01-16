@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 static const NSString *ViewControllerThreadTest = @"SYThreadTestViewController";
+static const NSString *ViewControllerRuntimeTest = @"SYRuntimeTestViewController";
+static const NSString *ViewControllerCellFactory = @"SYCellFactoryTestViewController";
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -74,9 +76,12 @@ static const NSString *ViewControllerThreadTest = @"SYThreadTestViewController";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    [cell.textLabel setTextFont:[UIFont H18Font] textColor:[UIColor blueColor] text:self.dataArray[indexPath.row].allValues[0]];
-    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell.textLabel setTextFont:[UIFont H18Font] textColor:[UIColor blueColor] text:self.dataArray[indexPath.row].allValues[0]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -90,9 +95,12 @@ static const NSString *ViewControllerThreadTest = @"SYThreadTestViewController";
 - (UITableView *)tableView
 {
     if (nil == _tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.frame];
-        [_tableView setDataSource:self];
-        [_tableView setDelegate:self];
+        _tableView = ({
+            UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+            [tableView setDataSource:self];
+            [tableView setDelegate:self];
+            tableView;
+        });
     }
     
     return _tableView;
@@ -101,7 +109,8 @@ static const NSString *ViewControllerThreadTest = @"SYThreadTestViewController";
 - (NSArray *)dataArray
 {
     return @[
-             @{ViewControllerThreadTest : @"多线程"}
+             @{ViewControllerThreadTest : @"多线程"},
+             @{ViewControllerRuntimeTest : @"运行时"},
              ];
 }
 

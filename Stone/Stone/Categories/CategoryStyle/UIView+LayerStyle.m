@@ -27,9 +27,12 @@
 
 - (void)setLayerCordius:(CGFloat)cor borderWidth:(CGFloat)width borderColor:(UIColor *)color layerBackColor:(UIColor *)backColor
 {
-    [self.layer setMasksToBounds:YES];
     [self.layer setCornerRadius:cor];
     [self.layer setBorderWidth:width];
+    
+    [self.layer setMasksToBounds:YES];
+    [self.layer setShouldRasterize:YES];
+    [self.layer setRasterizationScale:self.layer.contentsScale];
     
     if (color) {
         [self.layer setBorderColor:[color CGColor]];
