@@ -335,43 +335,7 @@ static const NSString *SelectorUseBarrierAsync = @"useBarrierAsync";
              @{SelectorUseDispatchApply : @"循环执行队列"},
              @{SelectorQueueSuspend : @"队列挂起与恢复"},
              @{SelectorUseBarrierAsync : @"任务栅栏"},
-             
-             @{SelectorNameSyncSeroalQueue : @"同步执行串行队列"},
-             @{SelectorNameSyncConcurrentQueue : @"同步执行并行队列"},
-             @{SelectorNameSyncMainQueue : @"同步执行主队列"},
-             @{SelectorNameAsyncSeroalQueue : @"异步执行串行队列"},
-             @{SelectorNameAsyncConcurrentQueue : @"异步执行并行队列"},
-             @{SelectorNamePerformGroupQueue : @"异步执行队列组"},
-             @{SelectorNamePerformGroupUseEnterAndLeave : @"自动管理异步队列组"},
-             @{SelectorNameSemaphoreLock : @"信号量锁测试"},
-             @{SelectorUseDispatchApply : @"循环执行队列"},
-             @{SelectorQueueSuspend : @"队列挂起与恢复"},
-             @{SelectorUseBarrierAsync : @"任务栅栏"},
-             
-             @{SelectorNameSyncSeroalQueue : @"同步执行串行队列"},
-             @{SelectorNameSyncConcurrentQueue : @"同步执行并行队列"},
-             @{SelectorNameSyncMainQueue : @"同步执行主队列"},
-             @{SelectorNameAsyncSeroalQueue : @"异步执行串行队列"},
-             @{SelectorNameAsyncConcurrentQueue : @"异步执行并行队列"},
-             @{SelectorNamePerformGroupQueue : @"异步执行队列组"},
-             @{SelectorNamePerformGroupUseEnterAndLeave : @"自动管理异步队列组"},
-             @{SelectorNameSemaphoreLock : @"信号量锁测试"},
-             @{SelectorUseDispatchApply : @"循环执行队列"},
-             @{SelectorQueueSuspend : @"队列挂起与恢复"},
-             @{SelectorUseBarrierAsync : @"任务栅栏"},
-             
-             @{SelectorNameSyncSeroalQueue : @"同步执行串行队列"},
-             @{SelectorNameSyncConcurrentQueue : @"同步执行并行队列"},
-             @{SelectorNameSyncMainQueue : @"同步执行主队列"},
-             @{SelectorNameAsyncSeroalQueue : @"异步执行串行队列"},
-             @{SelectorNameAsyncConcurrentQueue : @"异步执行并行队列"},
-             @{SelectorNamePerformGroupQueue : @"异步执行队列组"},
-             @{SelectorNamePerformGroupUseEnterAndLeave : @"自动管理异步队列组"},
-             @{SelectorNameSemaphoreLock : @"信号量锁测试"},
-             @{SelectorUseDispatchApply : @"循环执行队列"},
-             @{SelectorQueueSuspend : @"队列挂起与恢复"},
-             @{SelectorUseBarrierAsync : @"任务栅栏"},
-             ];
+            ];
 }
 
 @end

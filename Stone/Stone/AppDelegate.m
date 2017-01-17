@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "UIViewController+ClassName.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [UIViewController displayClassName:YES];
     
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
     [self.window setBackgroundColor:[UIColor whiteColor]];

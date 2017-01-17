@@ -50,10 +50,13 @@ static const NSString *ViewControllerCellFactory = @"SYCellFactoryTestViewContro
     NSDictionary *dic = self.dataArray[indexPath.row];
     NSString *classString = dic.allKeys[0];
     
-    UIViewController *viewController = [[NSClassFromString(classString) alloc] init];
-    [viewController.navigationItem setTitle:dic[classString]];
-    
-    [self.navigationController pushViewController:viewController animated:YES];
+    Class class = NSClassFromString(classString);
+    if (class) {
+        UIViewController *viewController = [[NSClassFromString(classString) alloc] init];
+        [viewController.navigationItem setTitle:dic[classString]];
+        
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 #pragma mark - UITableViewDataSource And UITableViewDelegate

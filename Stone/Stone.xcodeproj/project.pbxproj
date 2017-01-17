@@ -26,7 +26,10 @@
 		16D412C11DFABEB700A33ADC /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B61DFABEB700A33ADC /* NSArray+Log.m */; };
 		16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */; };
 		16D84ED61E2CB56800435213 /* SYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84ED51E2CB56800435213 /* SYModel.m */; };
-		16D84ED91E2CC45B00435213 /* SYCellFactoryTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84ED81E2CC45B00435213 /* SYCellFactoryTestViewController.m */; };
+		16D84EDC1E2CC78A00435213 /* UIViewController+ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EDB1E2CC78A00435213 /* UIViewController+ClassName.m */; };
+		16D84EE01E2DC5AC00435213 /* SYMethodForwardTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EDF1E2DC5AC00435213 /* SYMethodForwardTest.m */; };
+		16D84EE31E2DC65700435213 /* SYReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EE21E2DC65700435213 /* SYReplacement.m */; };
+		16D84EE61E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EE51E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m */; };
 		B926192ED5ECD5AC62981E26 /* libPods-Stone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 157C7BD9455872946F42C141 /* libPods-Stone.a */; };
 /* End PBXBuildFile section */
 
@@ -72,8 +75,14 @@
 		16D412C31DFABF0300A33ADC /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
 		16D84ED41E2CB56800435213 /* SYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYModel.h; sourceTree = "<group>"; };
 		16D84ED51E2CB56800435213 /* SYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYModel.m; sourceTree = "<group>"; };
-		16D84ED71E2CC45B00435213 /* SYCellFactoryTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCellFactoryTestViewController.h; sourceTree = "<group>"; };
-		16D84ED81E2CC45B00435213 /* SYCellFactoryTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCellFactoryTestViewController.m; sourceTree = "<group>"; };
+		16D84EDA1E2CC78A00435213 /* UIViewController+ClassName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ClassName.h"; path = "CategoryStyle/UIViewController+ClassName.h"; sourceTree = "<group>"; };
+		16D84EDB1E2CC78A00435213 /* UIViewController+ClassName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ClassName.m"; path = "CategoryStyle/UIViewController+ClassName.m"; sourceTree = "<group>"; };
+		16D84EDE1E2DC5AC00435213 /* SYMethodForwardTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMethodForwardTest.h; sourceTree = "<group>"; };
+		16D84EDF1E2DC5AC00435213 /* SYMethodForwardTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMethodForwardTest.m; sourceTree = "<group>"; };
+		16D84EE11E2DC65700435213 /* SYReplacement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYReplacement.h; sourceTree = "<group>"; };
+		16D84EE21E2DC65700435213 /* SYReplacement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYReplacement.m; sourceTree = "<group>"; };
+		16D84EE41E2DF8C600435213 /* SYMethodSwizzlingTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMethodSwizzlingTestViewController.h; sourceTree = "<group>"; };
+		16D84EE51E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMethodSwizzlingTestViewController.m; sourceTree = "<group>"; };
 		6DEF56D403682A71F3BA4437 /* Pods-Stone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stone/Pods-Stone.debug.xcconfig"; sourceTree = "<group>"; };
 		C97E6924C19819B15D75E944 /* Pods-Stone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stone/Pods-Stone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +120,7 @@
 		16244D311DF7B8D200EF6BDB /* Stone */ = {
 			isa = PBXGroup;
 			children = (
+				16D84EDD1E2DC59800435213 /* Runtime */,
 				16D84ED31E2CB4FA00435213 /* Model */,
 				16C8B7A21E052AD500B6C64A /* Thread */,
 				16D412A61DFABEB700A33ADC /* Categories */,
@@ -145,8 +155,6 @@
 				16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */,
 				1635BA521E0940230074ABA1 /* SYRuntimeTestViewController.h */,
 				1635BA531E0940230074ABA1 /* SYRuntimeTestViewController.m */,
-				16D84ED71E2CC45B00435213 /* SYCellFactoryTestViewController.h */,
-				16D84ED81E2CC45B00435213 /* SYCellFactoryTestViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -170,6 +178,8 @@
 				16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */,
 				168CB64D1E00F6A30062804B /* NSString+MD5.h */,
 				168CB64E1E00F6A30062804B /* NSString+MD5.m */,
+				16D84EDA1E2CC78A00435213 /* UIViewController+ClassName.h */,
+				16D84EDB1E2CC78A00435213 /* UIViewController+ClassName.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -210,6 +220,19 @@
 				16D84ED51E2CB56800435213 /* SYModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		16D84EDD1E2DC59800435213 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				16D84EDE1E2DC5AC00435213 /* SYMethodForwardTest.h */,
+				16D84EDF1E2DC5AC00435213 /* SYMethodForwardTest.m */,
+				16D84EE11E2DC65700435213 /* SYReplacement.h */,
+				16D84EE21E2DC65700435213 /* SYReplacement.m */,
+				16D84EE41E2DF8C600435213 /* SYMethodSwizzlingTestViewController.h */,
+				16D84EE51E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m */,
+			);
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 		B02FC299998AC42AB9A2FC7F /* Pods */ = {
@@ -354,19 +377,22 @@
 			files = (
 				1635BA541E0940230074ABA1 /* SYRuntimeTestViewController.m in Sources */,
 				16D84ED61E2CB56800435213 /* SYModel.m in Sources */,
+				16D84EE01E2DC5AC00435213 /* SYMethodForwardTest.m in Sources */,
+				16D84EE31E2DC65700435213 /* SYReplacement.m in Sources */,
 				16D412BF1DFABEB700A33ADC /* UIView+LayerStyle.m in Sources */,
 				16244D7A1DF7BBC900EF6BDB /* ViewController.m in Sources */,
 				16D412BB1DFABEB700A33ADC /* UIButton+Style.m in Sources */,
 				16C8B7A51E052B4E00B6C64A /* SYThreadOperation.m in Sources */,
+				16D84EDC1E2CC78A00435213 /* UIViewController+ClassName.m in Sources */,
 				16D412BD1DFABEB700A33ADC /* UIFont+Style.m in Sources */,
 				16D412C01DFABEB700A33ADC /* UIView+Style.m in Sources */,
 				16C8B7AB1E05383800B6C64A /* SYThreadTestViewController.m in Sources */,
 				16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */,
 				168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */,
 				16D412C11DFABEB700A33ADC /* NSArray+Log.m in Sources */,
-				16D84ED91E2CC45B00435213 /* SYCellFactoryTestViewController.m in Sources */,
 				16244D371DF7B8D200EF6BDB /* AppDelegate.m in Sources */,
 				16244D341DF7B8D200EF6BDB /* main.m in Sources */,
+				16D84EE61E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m in Sources */,
 				16D412BE1DFABEB700A33ADC /* UILabel+Style.m in Sources */,
 				16D412BC1DFABEB700A33ADC /* UIColor+Style.m in Sources */,
 			);
