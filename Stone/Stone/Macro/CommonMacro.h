@@ -19,7 +19,7 @@
 
 //Log
 #ifdef DEBUG
-#	define DebugLog(fmt, ...) NSLog((@"[%@]-%s #%d " fmt), [self class], __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#	define DebugLog(fmt, ...) NSLog((@"[%@]-%s #%d\n" fmt), [self class], __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #   define DebugSLog(fmt, ...) NSLog(fmt, __VA_ARGS__)
 #else
 #	define DebugLog(...)
