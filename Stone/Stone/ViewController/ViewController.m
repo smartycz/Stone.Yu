@@ -114,7 +114,7 @@ static const NSString *ViewControllerCellFactory = @"SYCellFactoryTestViewContro
     return @[
              @{ViewControllerThreadTest : @"多线程"},
              @{ViewControllerRuntimeTest : @"运行时"},
-             ];
+             @{ViewControllerCellFactory : @"cell工厂"}];
 }
 
 @end

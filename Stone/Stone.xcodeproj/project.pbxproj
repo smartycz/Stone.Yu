@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1613742B1F051A8A00135DD9 /* SYCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1613742A1F051A8A00135DD9 /* SYCellModel.m */; };
+		1613742E1F051D8C00135DD9 /* SYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1613742D1F051D8C00135DD9 /* SYTableViewCell.m */; };
+		161374311F05223800135DD9 /* SYCellFactoryTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 161374301F05223800135DD9 /* SYCellFactoryTestViewController.m */; };
+		161374371F0522F400135DD9 /* SYTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 161374361F0522F400135DD9 /* SYTableViewCell1.m */; };
+		1613743A1F05246200135DD9 /* SYCell1Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 161374391F05246200135DD9 /* SYCell1Model.m */; };
+		1613743D1F05334D00135DD9 /* SYTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1613743C1F05334D00135DD9 /* SYTableViewCell2.m */; };
 		16244D341DF7B8D200EF6BDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16244D331DF7B8D200EF6BDB /* main.m */; };
 		16244D371DF7B8D200EF6BDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16244D361DF7B8D200EF6BDB /* AppDelegate.m */; };
 		16244D3D1DF7B8D200EF6BDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16244D3B1DF7B8D200EF6BDB /* Main.storyboard */; };
@@ -35,6 +41,18 @@
 
 /* Begin PBXFileReference section */
 		157C7BD9455872946F42C141 /* libPods-Stone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Stone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		161374291F051A8A00135DD9 /* SYCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCellModel.h; sourceTree = "<group>"; };
+		1613742A1F051A8A00135DD9 /* SYCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCellModel.m; sourceTree = "<group>"; };
+		1613742C1F051D8C00135DD9 /* SYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTableViewCell.h; sourceTree = "<group>"; };
+		1613742D1F051D8C00135DD9 /* SYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTableViewCell.m; sourceTree = "<group>"; };
+		1613742F1F05223800135DD9 /* SYCellFactoryTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCellFactoryTestViewController.h; sourceTree = "<group>"; };
+		161374301F05223800135DD9 /* SYCellFactoryTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCellFactoryTestViewController.m; sourceTree = "<group>"; };
+		161374351F0522F400135DD9 /* SYTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTableViewCell1.h; sourceTree = "<group>"; };
+		161374361F0522F400135DD9 /* SYTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTableViewCell1.m; sourceTree = "<group>"; };
+		161374381F05246200135DD9 /* SYCell1Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCell1Model.h; sourceTree = "<group>"; };
+		161374391F05246200135DD9 /* SYCell1Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCell1Model.m; sourceTree = "<group>"; };
+		1613743B1F05334D00135DD9 /* SYTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTableViewCell2.h; sourceTree = "<group>"; };
+		1613743C1F05334D00135DD9 /* SYTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTableViewCell2.m; sourceTree = "<group>"; };
 		16244D2F1DF7B8D200EF6BDB /* Stone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16244D331DF7B8D200EF6BDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16244D351DF7B8D200EF6BDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +117,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		161374281F0519E200135DD9 /* CellFactory */ = {
+			isa = PBXGroup;
+			children = (
+				161374291F051A8A00135DD9 /* SYCellModel.h */,
+				1613742A1F051A8A00135DD9 /* SYCellModel.m */,
+				1613742C1F051D8C00135DD9 /* SYTableViewCell.h */,
+				1613742D1F051D8C00135DD9 /* SYTableViewCell.m */,
+			);
+			path = CellFactory;
+			sourceTree = "<group>";
+		};
+		161374321F05229200135DD9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				161374331F05229200135DD9 /* cellModel */,
+				161374341F05229200135DD9 /* CellView */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		161374331F05229200135DD9 /* cellModel */ = {
+			isa = PBXGroup;
+			children = (
+				161374381F05246200135DD9 /* SYCell1Model.h */,
+				161374391F05246200135DD9 /* SYCell1Model.m */,
+			);
+			path = cellModel;
+			sourceTree = "<group>";
+		};
+		161374341F05229200135DD9 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				161374351F0522F400135DD9 /* SYTableViewCell1.h */,
+				161374361F0522F400135DD9 /* SYTableViewCell1.m */,
+				1613743B1F05334D00135DD9 /* SYTableViewCell2.h */,
+				1613743C1F05334D00135DD9 /* SYTableViewCell2.m */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
 		16244D261DF7B8D200EF6BDB = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +178,7 @@
 		16244D311DF7B8D200EF6BDB /* Stone */ = {
 			isa = PBXGroup;
 			children = (
+				161374281F0519E200135DD9 /* CellFactory */,
 				16D84EDD1E2DC59800435213 /* Runtime */,
 				16D84ED31E2CB4FA00435213 /* Model */,
 				16C8B7A21E052AD500B6C64A /* Thread */,
@@ -149,12 +208,15 @@
 		16244D771DF7BBC900EF6BDB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				161374321F05229200135DD9 /* Cell */,
 				16244D781DF7BBC900EF6BDB /* ViewController.h */,
 				16244D791DF7BBC900EF6BDB /* ViewController.m */,
 				16C8B7A91E05383800B6C64A /* SYThreadTestViewController.h */,
 				16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */,
 				1635BA521E0940230074ABA1 /* SYRuntimeTestViewController.h */,
 				1635BA531E0940230074ABA1 /* SYRuntimeTestViewController.m */,
+				1613742F1F05223800135DD9 /* SYCellFactoryTestViewController.h */,
+				161374301F05223800135DD9 /* SYCellFactoryTestViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -287,6 +349,7 @@
 				TargetAttributes = {
 					16244D2E1DF7B8D200EF6BDB = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 52KTBFLJDB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -377,8 +440,11 @@
 			files = (
 				1635BA541E0940230074ABA1 /* SYRuntimeTestViewController.m in Sources */,
 				16D84ED61E2CB56800435213 /* SYModel.m in Sources */,
+				1613742B1F051A8A00135DD9 /* SYCellModel.m in Sources */,
 				16D84EE01E2DC5AC00435213 /* SYMethodForwardTest.m in Sources */,
 				16D84EE31E2DC65700435213 /* SYReplacement.m in Sources */,
+				1613742E1F051D8C00135DD9 /* SYTableViewCell.m in Sources */,
+				1613743D1F05334D00135DD9 /* SYTableViewCell2.m in Sources */,
 				16D412BF1DFABEB700A33ADC /* UIView+LayerStyle.m in Sources */,
 				16244D7A1DF7BBC900EF6BDB /* ViewController.m in Sources */,
 				16D412BB1DFABEB700A33ADC /* UIButton+Style.m in Sources */,
@@ -386,6 +452,8 @@
 				16D84EDC1E2CC78A00435213 /* UIViewController+ClassName.m in Sources */,
 				16D412BD1DFABEB700A33ADC /* UIFont+Style.m in Sources */,
 				16D412C01DFABEB700A33ADC /* UIView+Style.m in Sources */,
+				161374371F0522F400135DD9 /* SYTableViewCell1.m in Sources */,
+				1613743A1F05246200135DD9 /* SYCell1Model.m in Sources */,
 				16C8B7AB1E05383800B6C64A /* SYThreadTestViewController.m in Sources */,
 				16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */,
 				168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */,
@@ -394,6 +462,7 @@
 				16244D341DF7B8D200EF6BDB /* main.m in Sources */,
 				16D84EE61E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m in Sources */,
 				16D412BE1DFABEB700A33ADC /* UILabel+Style.m in Sources */,
+				161374311F05223800135DD9 /* SYCellFactoryTestViewController.m in Sources */,
 				16D412BC1DFABEB700A33ADC /* UIColor+Style.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +586,7 @@
 			baseConfigurationReference = 6DEF56D403682A71F3BA4437 /* Pods-Stone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 52KTBFLJDB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Stone/PrefixHeader.pch;
 				INFOPLIST_FILE = Stone/Info.plist;
@@ -531,6 +601,7 @@
 			baseConfigurationReference = C97E6924C19819B15D75E944 /* Pods-Stone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 52KTBFLJDB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Stone/PrefixHeader.pch;
 				INFOPLIST_FILE = Stone/Info.plist;
