@@ -28,9 +28,9 @@
     
     self.cellDataArray = [NSMutableArray array];
     
-    SYCell1Model *cell1Model = [[SYCell1Model alloc] initWithContent:@[@"123", @"456", @"789"] andCellType:@"SYTableViewCell1"];
+    SYCell1Model *cell1Model = [[SYCell1Model alloc] initWithContent:@[@"111", @"222", @"333"] andCellType:@"SYTableViewCell1"];
     
-    SYCell1Model *cell2Model = [[SYCell1Model alloc] initWithContent:@[@"123", @"456", @"789"] andCellType:@"SYTableViewCell2"];
+    SYCell1Model *cell2Model = [[SYCell1Model alloc] initWithContent:@[@"aaa", @"bbb", @"ccc"] andCellType:@"SYTableViewCell2"];
     
     [self.cellDataArray addObject:@[cell1Model,cell1Model].mutableCopy];
     [self.cellDataArray addObject:@[cell2Model,cell2Model].mutableCopy];

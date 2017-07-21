@@ -11,6 +11,7 @@
 static const NSString *ViewControllerThreadTest = @"SYThreadTestViewController";
 static const NSString *ViewControllerRuntimeTest = @"SYRuntimeTestViewController";
 static const NSString *ViewControllerCellFactory = @"SYCellFactoryTestViewController";
+static const NSString *ViewControllerViewControllerTransition = @"SYViewControllerTransitionViewController";
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -54,7 +55,6 @@ static const NSString *ViewControllerCellFactory = @"SYCellFactoryTestViewContro
     if (class) {
         UIViewController *viewController = [[NSClassFromString(classString) alloc] init];
         [viewController.navigationItem setTitle:dic[classString]];
-        
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
@@ -114,7 +114,8 @@ static const NSString *ViewControllerCellFactory = @"SYCellFactoryTestViewContro
     return @[
              @{ViewControllerThreadTest : @"多线程"},
              @{ViewControllerRuntimeTest : @"运行时"},
-             @{ViewControllerCellFactory : @"cell工厂"}];
+             @{ViewControllerCellFactory : @"cell工厂"},
+             @{ViewControllerViewControllerTransition: @"转场"}];
 }
 
 @end

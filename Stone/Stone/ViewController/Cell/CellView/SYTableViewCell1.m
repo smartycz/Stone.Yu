@@ -23,21 +23,21 @@
 - (void)addSubViews
 {
     [self.contentView addSubview:({
-        self.label1 = [UILabel labelWithTextFont:[UIFont H14Font] textColor:[UIColor colorWithHex:0xcccccc] backgroundColor:[UIColor grayColor]];
-        [self.label1 setLayerCordius:2.0];
-        self.label1;
+        UILabel *label1 = [UILabel labelWithTextFont:[UIFont H14Font] textColor:[UIColor colorWithHex:0xcccccc] backgroundColor:[UIColor grayColor]];
+        [label1 setLayerCordius:2.0];
+        self.label1 = label1;
     })];
     
     [self.contentView addSubview:({
-        self.label2 = [UILabel labelWithTextFont:[UIFont H14Font] textColor:[UIColor colorWithHex:0xbbbbbb] backgroundColor:[UIColor grayColor]];
-        [self.label2 setLayerCordius:2.0];
-        self.label2;
+        UILabel *label2 = [UILabel labelWithTextFont:[UIFont H14Font] textColor:[UIColor colorWithHex:0xbbbbbb] backgroundColor:[UIColor grayColor]];
+        [label2 setLayerCordius:2.0];
+        self.label2 = label2;
     })];
     
     [self.contentView addSubview:({
-        self.label3 = [UILabel labelWithTextFont:[UIFont H14Font] textColor:[UIColor colorWithHex:0xaaaaaa] backgroundColor:[UIColor grayColor]];
-        [self.label3 setLayerCordius:2.0];
-        self.label3;
+        UILabel *label3 = [UILabel labelWithTextFont:[UIFont H14Font] textColor:[UIColor colorWithHex:0xaaaaaa] backgroundColor:[UIColor grayColor]];
+        [label3 setLayerCordius:2.0];
+        self.label3 = label3;
     })];
 }
 

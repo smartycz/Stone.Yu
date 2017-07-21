@@ -66,6 +66,11 @@
 
 - (void)addSubViews { }
 
+- (void)setDelegate:(id<SYTableViewCellDelegate>)delegate
+{
+    _delegate = delegate;
+}
+
 - (void)setCellWithData:(__kindof SYCellModel *)cellModel
 {
     if (!cellModel) {

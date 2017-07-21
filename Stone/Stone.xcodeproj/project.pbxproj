@@ -20,6 +20,11 @@
 		16244D421DF7B8D200EF6BDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16244D401DF7B8D200EF6BDB /* LaunchScreen.storyboard */; };
 		16244D7A1DF7BBC900EF6BDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16244D791DF7BBC900EF6BDB /* ViewController.m */; };
 		1635BA541E0940230074ABA1 /* SYRuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635BA531E0940230074ABA1 /* SYRuntimeTestViewController.m */; };
+		1681018D1F21D97E001DDF19 /* SYViewControllerTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1681018C1F21D97E001DDF19 /* SYViewControllerTransitionViewController.m */; };
+		168101941F21DE1B001DDF19 /* BKAlertAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1681018F1F21DE1B001DDF19 /* BKAlertAnimationController.m */; };
+		168101951F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 168101911F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m */; };
+		168101961F21DE1B001DDF19 /* BKAlertPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168101931F21DE1B001DDF19 /* BKAlertPresentationController.m */; };
+		168101991F2204F3001DDF19 /* SYTestAllertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168101981F2204F3001DDF19 /* SYTestAllertViewController.m */; };
 		168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CB64E1E00F6A30062804B /* NSString+MD5.m */; };
 		16C8B7A51E052B4E00B6C64A /* SYThreadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C8B7A41E052B4E00B6C64A /* SYThreadOperation.m */; };
 		16C8B7AB1E05383800B6C64A /* SYThreadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */; };
@@ -66,6 +71,16 @@
 		16244D791DF7BBC900EF6BDB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1635BA521E0940230074ABA1 /* SYRuntimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYRuntimeTestViewController.h; sourceTree = "<group>"; };
 		1635BA531E0940230074ABA1 /* SYRuntimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYRuntimeTestViewController.m; sourceTree = "<group>"; };
+		1681018B1F21D97E001DDF19 /* SYViewControllerTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYViewControllerTransitionViewController.h; sourceTree = "<group>"; };
+		1681018C1F21D97E001DDF19 /* SYViewControllerTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYViewControllerTransitionViewController.m; sourceTree = "<group>"; };
+		1681018E1F21DE1B001DDF19 /* BKAlertAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAlertAnimationController.h; sourceTree = "<group>"; };
+		1681018F1F21DE1B001DDF19 /* BKAlertAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAlertAnimationController.m; sourceTree = "<group>"; };
+		168101901F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAlertModalTransitionDelegate.h; sourceTree = "<group>"; };
+		168101911F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAlertModalTransitionDelegate.m; sourceTree = "<group>"; };
+		168101921F21DE1B001DDF19 /* BKAlertPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAlertPresentationController.h; sourceTree = "<group>"; };
+		168101931F21DE1B001DDF19 /* BKAlertPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAlertPresentationController.m; sourceTree = "<group>"; };
+		168101971F2204F3001DDF19 /* SYTestAllertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTestAllertViewController.h; sourceTree = "<group>"; };
+		168101981F2204F3001DDF19 /* SYTestAllertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTestAllertViewController.m; sourceTree = "<group>"; };
 		168CB64D1E00F6A30062804B /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		168CB64E1E00F6A30062804B /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		16C8B7A31E052B4E00B6C64A /* SYThreadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYThreadOperation.h; sourceTree = "<group>"; };
@@ -208,6 +223,12 @@
 		16244D771DF7BBC900EF6BDB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1681018E1F21DE1B001DDF19 /* BKAlertAnimationController.h */,
+				1681018F1F21DE1B001DDF19 /* BKAlertAnimationController.m */,
+				168101901F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.h */,
+				168101911F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m */,
+				168101921F21DE1B001DDF19 /* BKAlertPresentationController.h */,
+				168101931F21DE1B001DDF19 /* BKAlertPresentationController.m */,
 				161374321F05229200135DD9 /* Cell */,
 				16244D781DF7BBC900EF6BDB /* ViewController.h */,
 				16244D791DF7BBC900EF6BDB /* ViewController.m */,
@@ -217,6 +238,10 @@
 				1635BA531E0940230074ABA1 /* SYRuntimeTestViewController.m */,
 				1613742F1F05223800135DD9 /* SYCellFactoryTestViewController.h */,
 				161374301F05223800135DD9 /* SYCellFactoryTestViewController.m */,
+				1681018B1F21D97E001DDF19 /* SYViewControllerTransitionViewController.h */,
+				1681018C1F21D97E001DDF19 /* SYViewControllerTransitionViewController.m */,
+				168101971F2204F3001DDF19 /* SYTestAllertViewController.h */,
+				168101981F2204F3001DDF19 /* SYTestAllertViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -440,8 +465,11 @@
 			files = (
 				1635BA541E0940230074ABA1 /* SYRuntimeTestViewController.m in Sources */,
 				16D84ED61E2CB56800435213 /* SYModel.m in Sources */,
+				168101951F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m in Sources */,
+				168101961F21DE1B001DDF19 /* BKAlertPresentationController.m in Sources */,
 				1613742B1F051A8A00135DD9 /* SYCellModel.m in Sources */,
 				16D84EE01E2DC5AC00435213 /* SYMethodForwardTest.m in Sources */,
+				1681018D1F21D97E001DDF19 /* SYViewControllerTransitionViewController.m in Sources */,
 				16D84EE31E2DC65700435213 /* SYReplacement.m in Sources */,
 				1613742E1F051D8C00135DD9 /* SYTableViewCell.m in Sources */,
 				1613743D1F05334D00135DD9 /* SYTableViewCell2.m in Sources */,
@@ -449,11 +477,13 @@
 				16244D7A1DF7BBC900EF6BDB /* ViewController.m in Sources */,
 				16D412BB1DFABEB700A33ADC /* UIButton+Style.m in Sources */,
 				16C8B7A51E052B4E00B6C64A /* SYThreadOperation.m in Sources */,
+				168101941F21DE1B001DDF19 /* BKAlertAnimationController.m in Sources */,
 				16D84EDC1E2CC78A00435213 /* UIViewController+ClassName.m in Sources */,
 				16D412BD1DFABEB700A33ADC /* UIFont+Style.m in Sources */,
 				16D412C01DFABEB700A33ADC /* UIView+Style.m in Sources */,
 				161374371F0522F400135DD9 /* SYTableViewCell1.m in Sources */,
 				1613743A1F05246200135DD9 /* SYCell1Model.m in Sources */,
+				168101991F2204F3001DDF19 /* SYTestAllertViewController.m in Sources */,
 				16C8B7AB1E05383800B6C64A /* SYThreadTestViewController.m in Sources */,
 				16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */,
 				168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */,
