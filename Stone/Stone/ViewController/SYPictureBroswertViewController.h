@@ -1,5 +1,5 @@
 //
-//  SYTestAllertViewController.h
+//  SYPictureBroswertViewController.h
 //  Stone
 //
 //  Created by Stone.Yu on 2017/7/21.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYTestAllertViewController : UIViewController
+@interface SYPictureBroswertViewController : UIViewController
+
+@property (nonatomic) CGRect originRect;
 
 @end

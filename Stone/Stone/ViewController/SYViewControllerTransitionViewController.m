@@ -7,10 +7,14 @@
 //
 
 #import "SYViewControllerTransitionViewController.h"
+#import "SYViewControllerTransitioningDelegate.h"
+#import "SYPictureBroswertViewController.h"
 
-@interface SYViewControllerTransitionViewController ()
+@interface SYViewControllerTransitionViewController () <UIViewControllerTransitioningDelegate, SYTransitionAnimatorDataSource>
 
-@property (nonatomic, strong) NSMutableArray *cellDataArray;
+@property (nonatomic, strong) UIView *tapView;
+
+@property (nonatomic, strong) SYViewControllerTransitioningDelegate *transitionDelegate;
 
 @end
 
@@ -18,32 +22,87 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.cellDataArray = @[@"Presentation"].mutableCopy;
 }
 
-#pragma mark - Table view data source
+- (void)dealloc
+{
+    
+}
+
+#pragma mark - UITableViewDataSource And UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.cellDataArray.count;
+    return  3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 150;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([UITableViewCell class])];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        UITapGestureRecognizer *tag1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tagImageView:)];
+        UIImageView *imageView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1"]];
+        imageView1.frame = CGRectMake(15, 10, 150, 130);
+        imageView1.userInteractionEnabled = YES;
+        [imageView1 addGestureRecognizer:tag1];
+        [cell addSubview:imageView1];
+        
+        UITapGestureRecognizer *tag2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tagImageView:)];
+        UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1"]];
+        imageView2.frame = CGRectMake(imageView1.right + 20, 10, 150, 130);
+        imageView2.userInteractionEnabled = YES;
+        [imageView2 addGestureRecognizer:tag2];
+        [cell addSubview:imageView2];
     }
-    cell.textLabel.text = self.cellDataArray[indexPath.row];
     
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - SYTransitionAnimatorDataSource
+
+- (CGRect)originRectTransitionAnimator:(SYTransitionAnimator *)animator
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    CGRect originRect = [[self.tapView superview] convertRect:self.tapView.frame toView:self.view];
     
-    UIViewController *vc = [NSClassFromString(@"SYTestAllertViewController") new];
+    return CGRectMake(originRect.origin.x, originRect.origin.y + 64, originRect.size.width, originRect.size.height);
+}
+
+- (CGRect)targetRectTransitionAnimator:(SYTransitionAnimator *)animator
+{
+    UIImage *image = [UIImage imageNamed:@"1"];
+    CGFloat height = image.size.height * Screen_Width / image.size.width;
+
+    return CGRectMake(0, CGRectGetMidY(self.view.frame) - height / 2, Screen_Width, height);
+}
+
+- (id)contentTransitionAnimator:(SYTransitionAnimator *)animator
+{
+    return [UIImage imageNamed:@"1"];
+}
+
+- (void)tagImageView:(UIGestureRecognizer *)tap
+{
+    self.tapView = tap.view;
+
+    SYPictureBroswertViewController *vc = [SYPictureBroswertViewController new];
+    vc.transitioningDelegate = self.transitionDelegate;
     [self.navigationController presentViewController:vc animated:YES completion:nil];
+}
+
+- (SYViewControllerTransitioningDelegate *)transitionDelegate
+{
+    if (!_transitionDelegate) {
+        SYViewControllerTransitioningDelegate *transitionDelegate = [[SYViewControllerTransitioningDelegate alloc] initWithAnimationClassString:@"SYPictureBroswerTransitionAnimator" animatDuration:0.35 animatorDataSource:self];
+        _transitionDelegate = transitionDelegate;
+    }
+    
+    return _transitionDelegate;
 }
 
 @end

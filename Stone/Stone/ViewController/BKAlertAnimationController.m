@@ -59,7 +59,6 @@
         }];
         
     } else if (fromViewController.beingDismissed) {
-        
         NSTimeInterval duration = [self transitionDuration:transitionContext];
         [UIView animateWithDuration:duration animations:^{
             fromView.alpha = 0;
@@ -68,6 +67,11 @@
         }];
         
     }
+}
+
+- (void)dealloc
+{
+    
 }
 
 @end

@@ -22,6 +22,10 @@
     return self;
 }
 
+- (void)dealloc{
+    
+}
+
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
     BKAlertAnimationController *alertAnimationController = [BKAlertAnimationController new];

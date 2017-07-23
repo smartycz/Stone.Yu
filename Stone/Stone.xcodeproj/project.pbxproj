@@ -24,7 +24,7 @@
 		168101941F21DE1B001DDF19 /* BKAlertAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1681018F1F21DE1B001DDF19 /* BKAlertAnimationController.m */; };
 		168101951F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 168101911F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m */; };
 		168101961F21DE1B001DDF19 /* BKAlertPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168101931F21DE1B001DDF19 /* BKAlertPresentationController.m */; };
-		168101991F2204F3001DDF19 /* SYTestAllertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168101981F2204F3001DDF19 /* SYTestAllertViewController.m */; };
+		168101991F2204F3001DDF19 /* SYPictureBroswertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168101981F2204F3001DDF19 /* SYPictureBroswertViewController.m */; };
 		168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CB64E1E00F6A30062804B /* NSString+MD5.m */; };
 		16C8B7A51E052B4E00B6C64A /* SYThreadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C8B7A41E052B4E00B6C64A /* SYThreadOperation.m */; };
 		16C8B7AB1E05383800B6C64A /* SYThreadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */; };
@@ -41,6 +41,9 @@
 		16D84EE01E2DC5AC00435213 /* SYMethodForwardTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EDF1E2DC5AC00435213 /* SYMethodForwardTest.m */; };
 		16D84EE31E2DC65700435213 /* SYReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EE21E2DC65700435213 /* SYReplacement.m */; };
 		16D84EE61E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EE51E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m */; };
+		16E06A0C1F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E06A071F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m */; };
+		16E06A0D1F24485700DCBE3A /* SYTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E06A091F24485700DCBE3A /* SYTransitionAnimator.m */; };
+		16E06A0E1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E06A0B1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.m */; };
 		B926192ED5ECD5AC62981E26 /* libPods-Stone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 157C7BD9455872946F42C141 /* libPods-Stone.a */; };
 /* End PBXBuildFile section */
 
@@ -79,8 +82,8 @@
 		168101911F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAlertModalTransitionDelegate.m; sourceTree = "<group>"; };
 		168101921F21DE1B001DDF19 /* BKAlertPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAlertPresentationController.h; sourceTree = "<group>"; };
 		168101931F21DE1B001DDF19 /* BKAlertPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAlertPresentationController.m; sourceTree = "<group>"; };
-		168101971F2204F3001DDF19 /* SYTestAllertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTestAllertViewController.h; sourceTree = "<group>"; };
-		168101981F2204F3001DDF19 /* SYTestAllertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTestAllertViewController.m; sourceTree = "<group>"; };
+		168101971F2204F3001DDF19 /* SYPictureBroswertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPictureBroswertViewController.h; sourceTree = "<group>"; };
+		168101981F2204F3001DDF19 /* SYPictureBroswertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPictureBroswertViewController.m; sourceTree = "<group>"; };
 		168CB64D1E00F6A30062804B /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		168CB64E1E00F6A30062804B /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		16C8B7A31E052B4E00B6C64A /* SYThreadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYThreadOperation.h; sourceTree = "<group>"; };
@@ -116,6 +119,12 @@
 		16D84EE21E2DC65700435213 /* SYReplacement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYReplacement.m; sourceTree = "<group>"; };
 		16D84EE41E2DF8C600435213 /* SYMethodSwizzlingTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMethodSwizzlingTestViewController.h; sourceTree = "<group>"; };
 		16D84EE51E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMethodSwizzlingTestViewController.m; sourceTree = "<group>"; };
+		16E06A061F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPictureBroswerTransitionAnimator.h; sourceTree = "<group>"; };
+		16E06A071F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPictureBroswerTransitionAnimator.m; sourceTree = "<group>"; };
+		16E06A081F24485700DCBE3A /* SYTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTransitionAnimator.h; sourceTree = "<group>"; };
+		16E06A091F24485700DCBE3A /* SYTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTransitionAnimator.m; sourceTree = "<group>"; };
+		16E06A0A1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYViewControllerTransitioningDelegate.h; sourceTree = "<group>"; };
+		16E06A0B1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYViewControllerTransitioningDelegate.m; sourceTree = "<group>"; };
 		6DEF56D403682A71F3BA4437 /* Pods-Stone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stone/Pods-Stone.debug.xcconfig"; sourceTree = "<group>"; };
 		C97E6924C19819B15D75E944 /* Pods-Stone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stone/Pods-Stone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +202,7 @@
 		16244D311DF7B8D200EF6BDB /* Stone */ = {
 			isa = PBXGroup;
 			children = (
+				16E06A051F2447FF00DCBE3A /* ViewControllerTransition */,
 				161374281F0519E200135DD9 /* CellFactory */,
 				16D84EDD1E2DC59800435213 /* Runtime */,
 				16D84ED31E2CB4FA00435213 /* Model */,
@@ -240,8 +250,8 @@
 				161374301F05223800135DD9 /* SYCellFactoryTestViewController.m */,
 				1681018B1F21D97E001DDF19 /* SYViewControllerTransitionViewController.h */,
 				1681018C1F21D97E001DDF19 /* SYViewControllerTransitionViewController.m */,
-				168101971F2204F3001DDF19 /* SYTestAllertViewController.h */,
-				168101981F2204F3001DDF19 /* SYTestAllertViewController.m */,
+				168101971F2204F3001DDF19 /* SYPictureBroswertViewController.h */,
+				168101981F2204F3001DDF19 /* SYPictureBroswertViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -320,6 +330,19 @@
 				16D84EE51E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m */,
 			);
 			path = Runtime;
+			sourceTree = "<group>";
+		};
+		16E06A051F2447FF00DCBE3A /* ViewControllerTransition */ = {
+			isa = PBXGroup;
+			children = (
+				16E06A0A1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.h */,
+				16E06A0B1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.m */,
+				16E06A081F24485700DCBE3A /* SYTransitionAnimator.h */,
+				16E06A091F24485700DCBE3A /* SYTransitionAnimator.m */,
+				16E06A061F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.h */,
+				16E06A071F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m */,
+			);
+			path = ViewControllerTransition;
 			sourceTree = "<group>";
 		};
 		B02FC299998AC42AB9A2FC7F /* Pods */ = {
@@ -464,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1635BA541E0940230074ABA1 /* SYRuntimeTestViewController.m in Sources */,
+				16E06A0C1F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m in Sources */,
 				16D84ED61E2CB56800435213 /* SYModel.m in Sources */,
 				168101951F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m in Sources */,
 				168101961F21DE1B001DDF19 /* BKAlertPresentationController.m in Sources */,
@@ -483,7 +507,7 @@
 				16D412C01DFABEB700A33ADC /* UIView+Style.m in Sources */,
 				161374371F0522F400135DD9 /* SYTableViewCell1.m in Sources */,
 				1613743A1F05246200135DD9 /* SYCell1Model.m in Sources */,
-				168101991F2204F3001DDF19 /* SYTestAllertViewController.m in Sources */,
+				168101991F2204F3001DDF19 /* SYPictureBroswertViewController.m in Sources */,
 				16C8B7AB1E05383800B6C64A /* SYThreadTestViewController.m in Sources */,
 				16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */,
 				168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */,
@@ -493,7 +517,9 @@
 				16D84EE61E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m in Sources */,
 				16D412BE1DFABEB700A33ADC /* UILabel+Style.m in Sources */,
 				161374311F05223800135DD9 /* SYCellFactoryTestViewController.m in Sources */,
+				16E06A0E1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.m in Sources */,
 				16D412BC1DFABEB700A33ADC /* UIColor+Style.m in Sources */,
+				16E06A0D1F24485700DCBE3A /* SYTransitionAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
