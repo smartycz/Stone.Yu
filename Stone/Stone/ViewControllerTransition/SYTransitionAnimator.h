@@ -25,9 +25,9 @@
 
 @optional
 
-- (CGRect)originRectTransitionAnimator:(SYTransitionAnimator *)animator;
-- (CGRect)targetRectTransitionAnimator:(SYTransitionAnimator *)animator;
+- (CGRect)originRect;
+- (CGRect)targetRect;
 
-- (id)contentTransitionAnimator:(SYTransitionAnimator *)animator;
+- (id)content;
 
 @end

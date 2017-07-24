@@ -12,8 +12,11 @@
 
 @interface SYViewControllerTransitioningDelegate : NSObject <UIViewControllerTransitioningDelegate>
 
+@property (nonatomic, weak) id<SYTransitionAnimatorDataSource> dataSource;
+
 - (instancetype)initWithAnimationClassString:(NSString *)animationClass;
 - (instancetype)initWithAnimationClassString:(NSString *)animationClass animatDuration:(NSTimeInterval)duration;
+
 - (instancetype)initWithAnimationClassString:(NSString *)animationClass animatorDataSource:(id<SYTransitionAnimatorDataSource>)dataSource;
 - (instancetype)initWithAnimationClassString:(NSString *)animationClass animatDuration:(NSTimeInterval)duration animatorDataSource:(id<SYTransitionAnimatorDataSource>)dataSource;
 

@@ -14,7 +14,6 @@
 
 @property (nonatomic, copy) NSString *animationClass;
 @property (nonatomic) NSTimeInterval duration;
-@property (nonatomic, weak) id<SYTransitionAnimatorDataSource> dataSource;
 
 @end
 

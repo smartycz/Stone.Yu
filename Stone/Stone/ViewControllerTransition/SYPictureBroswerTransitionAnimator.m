@@ -34,12 +34,12 @@
     CGRect endRect;
 
     if (toViewController.beingPresented) {
-        startRect = [self.animatorDataSource originRectTransitionAnimator:self];
-        endRect = [self.animatorDataSource targetRectTransitionAnimator:self];
+        startRect = self.animatorDataSource.originRect;
+        endRect = self.animatorDataSource.targetRect;
         toView.alpha = 0;
     } else {
-        startRect = [self.animatorDataSource targetRectTransitionAnimator:self];
-        endRect = [self.animatorDataSource originRectTransitionAnimator:self];
+        startRect = self.animatorDataSource.targetRect;
+        endRect = self.animatorDataSource.originRect;
     }
     
     UIView *backView = [self backViewWithRect:containerView.bounds];
@@ -85,7 +85,7 @@
 
 - (UIImageView *)imageViewWithRect:(CGRect)rect
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[self.animatorDataSource contentTransitionAnimator:self]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:self.animatorDataSource.content];
     imageView.frame = rect;
     return imageView;
 }
