@@ -34,6 +34,17 @@ static const NSString *ViewControllerViewControllerTransition = @"SYViewControll
     [super viewDidLoad];
     
     [self initView];
+    
+    [ViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated){
+        NSLog(@"aspectInfo = %@ \n aspectInfo.instance = %@ \n aspectInfo.originalInvocation = %@ \n", aspectInfo, aspectInfo.instance, aspectInfo.originalInvocation);
+    } error:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    NSLog(@"viewWillAppear");
 }
 
 - (void)didReceiveMemoryWarning {

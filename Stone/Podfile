@@ -13,4 +13,8 @@ pod 'SDWebImage'
 
 pod 'JSPatch', :inhibit_warnings => true
 
+pod 'Aspects'
+
+pod 'BlocksKit'
+
 end

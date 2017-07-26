@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Aspects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BlocksKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CocoaAsyncSocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>23D7DA26C40DEA0CBB49A7825C7CD4F1</key>
+		<key>0AC55E754182E1FCF070AC7F74379523</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B1541D916214F9F072F87D804294FAF</key>
+		<key>23D7DA26C40DEA0CBB49A7825C7CD4F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ECBDEFBBC51276C102CFAFAD4B92AD93</key>
+		<key>C7C5FD310966070D9553E5B95C59641B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D221426DF65454BE913CD274E538B533</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>FB1B608CA194B526EEF0EC7ADC16F3B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBBED9ED2CCA758DC0F70F89B29E98B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
