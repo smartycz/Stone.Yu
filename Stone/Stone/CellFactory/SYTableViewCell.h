@@ -23,10 +23,11 @@
 @property (nonatomic, strong) __kindof SYCellModel *cellModel;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
-+ (instancetype)cellWithTableView:(UITableView *)tableView cellType:(NSString *)cellClassString;
-+ (instancetype)cellWithTableView:(UITableView *)tableView cellType:(NSString *)cellClassString
++ (instancetype)cellWithTableView:(UITableView *)tableView cellType:(NSString *)cellClassName;
++ (instancetype)cellWithTableView:(UITableView *)tableView cellType:(NSString *)cellClassName
                          delegata:(id)delegate;
 
+- (void)initCell;
 - (void)addSubViews;
 
 - (void)setCellWithData:(__kindof SYCellModel *)cellModel;

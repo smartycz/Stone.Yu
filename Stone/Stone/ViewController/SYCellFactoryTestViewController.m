@@ -65,7 +65,7 @@
 {
     SYCell1Model *cellModel = self.cellDataArray[indexPath.section][indexPath.row];
     
-    SYTableViewCell * cell = [SYTableViewCell cellWithTableView:tableView cellType:cellModel.cellClassString delegata:self];
+    SYTableViewCell * cell = [SYTableViewCell cellWithTableView:tableView cellType:cellModel.cellClassName delegata:self];
     
     [cell setCellWithData:cellModel];
     
@@ -90,6 +90,7 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.frame];
         [_tableView setDataSource:self];
         [_tableView setDelegate:self];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     
     return _tableView;

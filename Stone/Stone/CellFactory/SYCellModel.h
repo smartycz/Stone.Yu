@@ -14,19 +14,19 @@
 
 @required
 
+// 一般在 cellModel 的子类实现，也可以在viewController实现
 - (CGFloat)cellHeightWithCellModel:(__kindof SYCellModel *)cellModel;
 
 @end
 
 @interface SYCellModel : NSObject
 
-@property (nonatomic, copy) NSString *cellClassString;
+@property (nonatomic, copy) NSString *cellClassName;
 
 @property (nonatomic, strong) id cellContent;
 @property (nonatomic, assign) CGFloat cellHeight;
 
-@property (nonatomic, weak) id<SYCellModelDelegate> delegate;
-
-- (instancetype)initWithContent:(id)content andCellType:(NSString *)cellClassString;
+- (instancetype)initWithContent:(id)content andCellType:(NSString *)cellClassName;
+- (instancetype)initWithContent:(id)content andCellType:(NSString *)cellClassName cellModelDelegate:(id<SYCellModelDelegate>)cellModelDelegate;
 
 @end

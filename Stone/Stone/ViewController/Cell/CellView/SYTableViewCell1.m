@@ -20,6 +20,13 @@
 
 @implementation SYTableViewCell1
 
+- (void)initCell
+{
+    self.contentView.layer.cornerRadius = 10.0f;
+    self.contentView.layer.masksToBounds = YES;
+    self.contentView.backgroundColor = [UIColor lightGrayColor];
+}
+
 - (void)addSubViews
 {
     [self.contentView addSubview:({

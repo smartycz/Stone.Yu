@@ -27,21 +27,21 @@
     return cell;
 }
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView cellType:(NSString *)cellClassString
++ (instancetype)cellWithTableView:(UITableView *)tableView cellType:(NSString *)cellClassName
 {
-    return [self cellWithTableView:tableView cellType:cellClassString delegata:nil];
+    return [self cellWithTableView:tableView cellType:cellClassName delegata:nil];
 }
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView cellType:(NSString *)cellClassString
++ (instancetype)cellWithTableView:(UITableView *)tableView cellType:(NSString *)cellClassName
                          delegata:(id)delegate
 {
     SYTableViewCell *cell = nil;
     
-    if (!cellClassString || !cellClassString.length) {
+    if (!cellClassName || !cellClassName.length) {
         return [SYTableViewCell cellWithTableView:tableView];
     }
     
-    Class class = NSClassFromString(cellClassString);
+    Class class = NSClassFromString(cellClassName);
     
     if (class && [class isSubclassOfClass:[SYTableViewCell class]]) {
         cell = [class cellWithTableView:tableView];
@@ -58,12 +58,14 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        [self initCell];
         [self addSubViews];
     }
     
     return self;
 }
 
+- (void)initCell { }
 - (void)addSubViews { }
 
 - (void)setDelegate:(id<SYTableViewCellDelegate>)delegate
