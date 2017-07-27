@@ -11,7 +11,7 @@
 #import "SYCell1Model.h"
 #import "SYTableViewCell.h"
 
-@interface SYCellFactoryTestViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface SYCellFactoryTestViewController () <UITableViewDelegate, UITableViewDataSource, SYCellModelDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -30,7 +30,7 @@
     
     SYCell1Model *cell1Model = [[SYCell1Model alloc] initWithContent:@[@"111", @"222", @"333"] andCellType:@"SYTableViewCell1"];
     
-    SYCell1Model *cell2Model = [[SYCell1Model alloc] initWithContent:@[@"aaa", @"bbb", @"ccc"] andCellType:@"SYTableViewCell2"];
+    SYCell1Model *cell2Model = [[SYCell1Model alloc] initWithContent:@[@"aaa", @"bbb", @"ccc"] andCellType:@"SYTableViewCell2" cellModelDelegate:self];
     
     [self.cellDataArray addObject:@[cell1Model,cell1Model].mutableCopy];
     [self.cellDataArray addObject:@[cell2Model,cell2Model].mutableCopy];
@@ -40,6 +40,11 @@
 {
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:self.tableView];
+}
+
+- (CGFloat)cellHeightWithCellModel:(__kindof SYCellModel *)cellModel
+{
+    return 100.0f;
 }
 
 #pragma mark - UITableViewDataSource And UITableViewDelegate

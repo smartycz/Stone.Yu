@@ -27,7 +27,7 @@
         self.cellContent = content;
         self.cellClassName = cellClassName;
         
-        if (cellModelDelegate) {
+        if (cellModelDelegate && [cellModelDelegate conformsToProtocol:@protocol(SYCellModelDelegate)]) {
             self.cellModelDelegate = cellModelDelegate;
             self.cellHeight = [self.cellModelDelegate cellHeightWithCellModel:self];
         } else if ([self conformsToProtocol:@protocol(SYCellModelDelegate)]) {
