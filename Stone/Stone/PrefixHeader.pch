@@ -20,8 +20,9 @@
 
 #pragma mark - Category
 
-#import "AJKCategoryStyle.h"
+#import "CategoryStyle.h"
 #import "NSString+MD5.h"
+#import "UIImage+Editer.h"
 
 #pragma mark - Macro
 
@@ -30,5 +31,6 @@
 
 #import <Aspects.h>
 #import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
 
 #endif /* PrefixHeader_pch */

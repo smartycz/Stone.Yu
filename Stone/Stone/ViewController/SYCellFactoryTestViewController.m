@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) NSMutableArray <NSMutableArray *>*cellDataArray;
 
+@property (nonatomic, strong) UILabel *valueLabel;
+
 @end
 
 @implementation SYCellFactoryTestViewController
@@ -34,6 +36,11 @@
     
     [self.cellDataArray addObject:@[cell1Model,cell1Model].mutableCopy];
     [self.cellDataArray addObject:@[cell2Model,cell2Model].mutableCopy];
+}
+
+- (void)sliderChanged:(UISlider *)slider
+{
+    NSLog(@"%f", slider.value);
 }
 
 - (void)initView

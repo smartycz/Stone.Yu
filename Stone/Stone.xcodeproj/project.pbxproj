@@ -36,6 +36,7 @@
 		16D412C01DFABEB700A33ADC /* UIView+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B41DFABEB700A33ADC /* UIView+Style.m */; };
 		16D412C11DFABEB700A33ADC /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B61DFABEB700A33ADC /* NSArray+Log.m */; };
 		16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */; };
+		16D6FBE91F34215700C4F312 /* UIImage+Editer.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6FBE81F34215700C4F312 /* UIImage+Editer.m */; };
 		16D84ED61E2CB56800435213 /* SYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84ED51E2CB56800435213 /* SYModel.m */; };
 		16D84EDC1E2CC78A00435213 /* UIViewController+ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EDB1E2CC78A00435213 /* UIViewController+ClassName.m */; };
 		16D84EE01E2DC5AC00435213 /* SYMethodForwardTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EDF1E2DC5AC00435213 /* SYMethodForwardTest.m */; };
@@ -90,7 +91,6 @@
 		16C8B7A41E052B4E00B6C64A /* SYThreadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYThreadOperation.m; sourceTree = "<group>"; };
 		16C8B7A91E05383800B6C64A /* SYThreadTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYThreadTestViewController.h; sourceTree = "<group>"; };
 		16C8B7AA1E05383800B6C64A /* SYThreadTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYThreadTestViewController.m; sourceTree = "<group>"; };
-		16D412A81DFABEB700A33ADC /* AJKCategoryStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJKCategoryStyle.h; sourceTree = "<group>"; };
 		16D412A91DFABEB700A33ADC /* UIButton+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Style.h"; sourceTree = "<group>"; };
 		16D412AA1DFABEB700A33ADC /* UIButton+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Style.m"; sourceTree = "<group>"; };
 		16D412AB1DFABEB700A33ADC /* UIColor+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Style.h"; sourceTree = "<group>"; };
@@ -109,6 +109,9 @@
 		16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 		16D412BA1DFABEB700A33ADC /* TodoMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoMacro.h; sourceTree = "<group>"; };
 		16D412C31DFABF0300A33ADC /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		16D6FBE61F34204900C4F312 /* CategoryStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryStyle.h; sourceTree = "<group>"; };
+		16D6FBE71F34215700C4F312 /* UIImage+Editer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Editer.h"; sourceTree = "<group>"; };
+		16D6FBE81F34215700C4F312 /* UIImage+Editer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Editer.m"; sourceTree = "<group>"; };
 		16D84ED41E2CB56800435213 /* SYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYModel.h; sourceTree = "<group>"; };
 		16D84ED51E2CB56800435213 /* SYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYModel.m; sourceTree = "<group>"; };
 		16D84EDA1E2CC78A00435213 /* UIViewController+ClassName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ClassName.h"; path = "CategoryStyle/UIViewController+ClassName.h"; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */,
 				168CB64D1E00F6A30062804B /* NSString+MD5.h */,
 				168CB64E1E00F6A30062804B /* NSString+MD5.m */,
+				16D6FBE71F34215700C4F312 /* UIImage+Editer.h */,
+				16D6FBE81F34215700C4F312 /* UIImage+Editer.m */,
 				16D84EDA1E2CC78A00435213 /* UIViewController+ClassName.h */,
 				16D84EDB1E2CC78A00435213 /* UIViewController+ClassName.m */,
 			);
@@ -284,7 +289,7 @@
 		16D412A71DFABEB700A33ADC /* CategoryStyle */ = {
 			isa = PBXGroup;
 			children = (
-				16D412A81DFABEB700A33ADC /* AJKCategoryStyle.h */,
+				16D6FBE61F34204900C4F312 /* CategoryStyle.h */,
 				16D412A91DFABEB700A33ADC /* UIButton+Style.h */,
 				16D412AA1DFABEB700A33ADC /* UIButton+Style.m */,
 				16D412AB1DFABEB700A33ADC /* UIColor+Style.h */,
@@ -461,7 +466,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C11B4CD3FFBE875DE61555CD /* [CP] Embed Pods Frameworks */ = {
@@ -486,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D6FBE91F34215700C4F312 /* UIImage+Editer.m in Sources */,
 				1635BA541E0940230074ABA1 /* SYRuntimeTestViewController.m in Sources */,
 				16E06A0C1F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m in Sources */,
 				16D84ED61E2CB56800435213 /* SYModel.m in Sources */,
