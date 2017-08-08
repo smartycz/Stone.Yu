@@ -10,6 +10,16 @@
 
 @implementation SYTableViewCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        [self initCell];
+        [self addSubViews];
+    }
+    
+    return self;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
 }
@@ -55,16 +65,6 @@
     return cell;
 }
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self initCell];
-        [self addSubViews];
-    }
-    
-    return self;
-}
-
 - (void)initCell { }
 - (void)addSubViews { }
 
@@ -75,10 +75,6 @@
 
 - (void)setCellWithData:(__kindof SYCellModel *)cellModel
 {
-    if (!cellModel) {
-        return;
-    }
-    
     self.cellModel = cellModel;
 }
 

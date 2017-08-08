@@ -10,11 +10,11 @@
 
 @implementation SYCell1Model
 
-- (CGFloat)cellHeightWithCellModel:(__kindof SYCellModel *)cellModel
+- (CGFloat)cellHeightWithCellModel:(id)data
 {
     CGFloat cellHeight = CGFLOAT_MIN;
     
-    if ([cellModel.cellContent isKindOfClass:[NSArray class]]) {
+    if ([data isKindOfClass:[NSArray class]]) {
         cellHeight = 50.0f;
     }
     

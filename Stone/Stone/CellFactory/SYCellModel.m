@@ -16,29 +16,62 @@
 
 @implementation SYCellModel
 
-- (instancetype)initWithContent:(id)content andCellType:(NSString *)cellClassName
+- (instancetype)initWithViewData:(id)data andCellType:(NSString *)className
 {
-    return [self initWithContent:content andCellType:cellClassName cellModelDelegate:nil];
+    return [self initWithViewData:data andCellType:className cellModelDelegate:nil];
 }
 
-- (instancetype)initWithContent:(id)content andCellType:(NSString *)cellClassName cellModelDelegate:(id<SYCellModelDelegate>)cellModelDelegate
+- (instancetype)initWithViewData:(id)data andCellType:(NSString *)className cellModelDelegate:(id<SYCellModelDelegate>)cellModelDelegate
 {
     if (self = [super init]) {
-        self.cellContent = content;
-        self.cellClassName = cellClassName;
+        self.data = data;
+        self.className = className;
         
         if (cellModelDelegate && [cellModelDelegate conformsToProtocol:@protocol(SYCellModelDelegate)]) {
             self.cellModelDelegate = cellModelDelegate;
-            self.cellHeight = [self.cellModelDelegate cellHeightWithCellModel:self];
         } else if ([self conformsToProtocol:@protocol(SYCellModelDelegate)]) {
             self.cellModelDelegate = (id <SYCellModelDelegate>)self;
-            self.cellHeight = [self.cellModelDelegate cellHeightWithCellModel:self];
-        } else {
-            self.cellHeight  = CGFLOAT_MIN;
         }
+        
+        self.cellHeight = [self getCellViewHeight];
+        self.headerHeight = [self getHeaderViewHeight];
+        self.footerHeight = [self getFooterViewHeight];
     }
     
     return self;
+}
+
+- (CGFloat)getCellViewHeight
+{
+    CGFloat height = CGFLOAT_MIN;
+    
+    if (self.cellModelDelegate && [self.cellModelDelegate respondsToSelector:@selector(cellHeightWithData:)]) {
+        height = [self.cellModelDelegate cellHeightWithData:self.data];
+    }
+    
+    return height;
+}
+
+- (CGFloat)getHeaderViewHeight
+{
+    CGFloat height = CGFLOAT_MIN;
+    
+    if (self.cellModelDelegate && [self.cellModelDelegate respondsToSelector:@selector(headerViewHeightWithData:)]) {
+        height = [self.cellModelDelegate headerViewHeightWithData:self.data];
+    }
+    
+    return height;
+}
+
+- (CGFloat)getFooterViewHeight
+{
+    CGFloat height = CGFLOAT_MIN;
+    
+    if (self.cellModelDelegate && [self.cellModelDelegate respondsToSelector:@selector(footerViewHeightWithData:)]) {
+        height = [self.cellModelDelegate footerViewHeightWithData:self.data];
+    }
+    
+    return height;
 }
 
 @end

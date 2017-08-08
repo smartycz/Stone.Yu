@@ -10,23 +10,31 @@
 
 @class SYCellModel;
 
+// 一般在 cellModel 的子类实现，也可以在viewController实现
 @protocol SYCellModelDelegate <NSObject>
 
-@required
+- (CGFloat)cellHeightWithData:(id)data;
 
-// 一般在 cellModel 的子类实现，也可以在viewController实现
-- (CGFloat)cellHeightWithCellModel:(__kindof SYCellModel *)cellModel;
+@optional
+
+- (CGFloat)headerViewHeightWithData:(id)data;
+- (CGFloat)footerViewHeightWithData:(id)data;
 
 @end
 
 @interface SYCellModel : NSObject
 
-@property (nonatomic, copy) NSString *cellClassName;
+@property (nonatomic, copy) NSString *className;
 
-@property (nonatomic, strong) id cellContent;
+@property (nonatomic, strong) id data;
+
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
 @property (nonatomic, assign) CGFloat cellHeight;
+@property (nonatomic, assign) CGFloat headerHeight;
+@property (nonatomic, assign) CGFloat footerHeight;
 
-- (instancetype)initWithContent:(id)content andCellType:(NSString *)cellClassName;
-- (instancetype)initWithContent:(id)content andCellType:(NSString *)cellClassName cellModelDelegate:(id<SYCellModelDelegate>)cellModelDelegate;
+- (instancetype)initWithViewData:(id)data andCellType:(NSString *)className;
+- (instancetype)initWithViewData:(id)data andCellType:(NSString *)className cellModelDelegate:(id<SYCellModelDelegate>)cellModelDelegate;
 
 @end
