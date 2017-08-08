@@ -93,7 +93,7 @@
 - (UIView *)backViewWithRect:(CGRect)rect
 {
     UIView *backView = [[UIView alloc] initWithFrame:rect];
-    backView.backgroundColor = [UIColor whiteColor];
+    backView.backgroundColor = [UIColor blackColor];
     return backView;
 }
 

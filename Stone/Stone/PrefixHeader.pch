@@ -32,5 +32,6 @@
 #import <Aspects.h>
 #import <BlocksKit.h>
 #import <BlocksKit+UIKit.h>
+#import <YYModel.h>
 
 #endif /* PrefixHeader_pch */

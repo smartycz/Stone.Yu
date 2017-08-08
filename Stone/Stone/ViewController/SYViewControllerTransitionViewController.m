@@ -10,11 +10,7 @@
 #import "SYViewControllerTransitioningDelegate.h"
 #import "SYPictureBroswertViewController.h"
 
-@interface SYViewControllerTransitionViewController () <UIViewControllerTransitioningDelegate, SYTransitionAnimatorDataSource>
-
-@property (nonatomic, strong) UIView *tapView;
-
-@property (nonatomic, strong) SYViewControllerTransitioningDelegate *transitionDelegate;
+@interface SYViewControllerTransitionViewController ()
 
 @end
 
@@ -64,45 +60,12 @@
     return cell;
 }
 
-#pragma mark - SYTransitionAnimatorDataSource
-
-- (CGRect)originRect
-{
-    CGRect originRect = [[self.tapView superview] convertRect:self.tapView.frame toView:self.view];
-    
-    return CGRectMake(originRect.origin.x, originRect.origin.y + 64, originRect.size.width, originRect.size.height);
-}
-
-- (CGRect)targetRect
-{
-    UIImage *image = [UIImage imageNamed:@"1"];
-    CGFloat height = image.size.height * Screen_Width / image.size.width;
-    
-    return CGRectMake(0, CGRectGetMidY(self.view.frame) - height / 2, Screen_Width, height);
-}
-
-- (id)content
-{
-    return [UIImage imageNamed:@"1"];
-}
-
 - (void)tagImageView:(UIGestureRecognizer *)tap
 {
-    self.tapView = tap.view;
-    
     SYPictureBroswertViewController *vc = [SYPictureBroswertViewController new];
-    vc.transitioningDelegate = self.transitionDelegate;
+    CGRect originRect = [[tap.view superview] convertRect:tap.view.frame toView:self.view];
+    vc.originRect = CGRectMake(originRect.origin.x, originRect.origin.y + 64, originRect.size.width, originRect.size.height);
     [self.navigationController presentViewController:vc animated:YES completion:nil];
-}
-
-- (SYViewControllerTransitioningDelegate *)transitionDelegate
-{
-    if (!_transitionDelegate) {
-        SYViewControllerTransitioningDelegate *transitionDelegate = [[SYViewControllerTransitioningDelegate alloc] initWithAnimationClassString:@"SYPictureBroswerTransitionAnimator" animatDuration:0.35 animatorDataSource:self];
-        _transitionDelegate = transitionDelegate;
-    }
-    
-    return _transitionDelegate;
 }
 
 @end

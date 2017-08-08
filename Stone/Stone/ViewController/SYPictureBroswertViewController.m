@@ -7,8 +7,14 @@
 //
 
 #import "SYPictureBroswertViewController.h"
+#import "SYViewControllerTransitioningDelegate.h"
 
-@interface SYPictureBroswertViewController ()
+#define kTransitionAnimatorA @"SYPictureBroswerTransitionAnimator"
+#define kTransitionAnimatorB @"SYAlertControllerTransitionAnimator"
+
+@interface SYPictureBroswertViewController () <SYTransitionAnimatorDataSource>
+
+@property (nonatomic, strong) SYViewControllerTransitioningDelegate *transitionDelegate;
 
 @end
 
@@ -17,7 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.transitioningDelegate = self.transitionDelegate;
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.view addSubview:({
+        UIView *backView = [[UIView alloc] initWithFrame:self.view.bounds];
+        backView.backgroundColor = [UIColor blackColor];
+        backView;
+    })];
     
     [self.view addSubview:({
         UITapGestureRecognizer *tag = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissView)];
@@ -45,5 +58,36 @@
 - (void)dealloc {
     
 }
+
+#pragma mark - SYTransitionAnimatorDataSource
+
+- (CGRect)originRect
+{
+    return _originRect;
+}
+
+- (CGRect)targetRect
+{
+    UIImage *image = [UIImage imageNamed:@"1"];
+    CGFloat height = image.size.height * Screen_Width / image.size.width;
+    
+    return CGRectMake(0, CGRectGetMidY(self.view.frame) - height / 2, Screen_Width, height);
+}
+
+- (id)content
+{
+    return [UIImage imageNamed:@"1"];
+}
+
+- (SYViewControllerTransitioningDelegate *)transitionDelegate
+{
+    if (!_transitionDelegate) {
+        SYViewControllerTransitioningDelegate *transitionDelegate = [[SYViewControllerTransitioningDelegate alloc] initWithAnimationClassString:kTransitionAnimatorA animatDuration:0.5 animatorDataSource:self];
+        _transitionDelegate = transitionDelegate;
+    }
+    
+    return _transitionDelegate;
+}
+
 
 @end

@@ -17,4 +17,6 @@ pod 'Aspects'
 
 pod 'BlocksKit'
 
+pod 'YYModel'
+
 end

@@ -12,6 +12,7 @@ static const NSString *ViewControllerThreadTest = @"SYThreadTestViewController";
 static const NSString *ViewControllerRuntimeTest = @"SYRuntimeTestViewController";
 static const NSString *ViewControllerCellFactory = @"SYCellFactoryTestViewController";
 static const NSString *ViewControllerViewControllerTransition = @"SYViewControllerTransitionViewController";
+static const NSString *ViewControllerYYModel = @"SYyyModelTestViewController";
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -126,7 +127,8 @@ static const NSString *ViewControllerViewControllerTransition = @"SYViewControll
              @{ViewControllerThreadTest : @"多线程"},
              @{ViewControllerRuntimeTest : @"运行时"},
              @{ViewControllerCellFactory : @"cell工厂"},
-             @{ViewControllerViewControllerTransition: @"转场"}];
+             @{ViewControllerViewControllerTransition : @"转场"},
+             @{ViewControllerYYModel : @"YYModel"}];
 }
 
 @end

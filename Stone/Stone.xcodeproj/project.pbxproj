@@ -37,6 +37,8 @@
 		16D412C11DFABEB700A33ADC /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B61DFABEB700A33ADC /* NSArray+Log.m */; };
 		16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */; };
 		16D6FBE91F34215700C4F312 /* UIImage+Editer.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6FBE81F34215700C4F312 /* UIImage+Editer.m */; };
+		16D6FBEC1F381CE300C4F312 /* SYyyModelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6FBEB1F381CE300C4F312 /* SYyyModelTestViewController.m */; };
+		16D6FBF51F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6FBF41F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m */; };
 		16D84ED61E2CB56800435213 /* SYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84ED51E2CB56800435213 /* SYModel.m */; };
 		16D84EDC1E2CC78A00435213 /* UIViewController+ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EDB1E2CC78A00435213 /* UIViewController+ClassName.m */; };
 		16D84EE01E2DC5AC00435213 /* SYMethodForwardTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EDF1E2DC5AC00435213 /* SYMethodForwardTest.m */; };
@@ -112,6 +114,10 @@
 		16D6FBE61F34204900C4F312 /* CategoryStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryStyle.h; sourceTree = "<group>"; };
 		16D6FBE71F34215700C4F312 /* UIImage+Editer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Editer.h"; sourceTree = "<group>"; };
 		16D6FBE81F34215700C4F312 /* UIImage+Editer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Editer.m"; sourceTree = "<group>"; };
+		16D6FBEA1F381CE300C4F312 /* SYyyModelTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYyyModelTestViewController.h; sourceTree = "<group>"; };
+		16D6FBEB1F381CE300C4F312 /* SYyyModelTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYyyModelTestViewController.m; sourceTree = "<group>"; };
+		16D6FBF31F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAlertControllerTransitionAnimator.h; sourceTree = "<group>"; };
+		16D6FBF41F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlertControllerTransitionAnimator.m; sourceTree = "<group>"; };
 		16D84ED41E2CB56800435213 /* SYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYModel.h; sourceTree = "<group>"; };
 		16D84ED51E2CB56800435213 /* SYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYModel.m; sourceTree = "<group>"; };
 		16D84EDA1E2CC78A00435213 /* UIViewController+ClassName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ClassName.h"; path = "CategoryStyle/UIViewController+ClassName.h"; sourceTree = "<group>"; };
@@ -255,6 +261,8 @@
 				1681018C1F21D97E001DDF19 /* SYViewControllerTransitionViewController.m */,
 				168101971F2204F3001DDF19 /* SYPictureBroswertViewController.h */,
 				168101981F2204F3001DDF19 /* SYPictureBroswertViewController.m */,
+				16D6FBEA1F381CE300C4F312 /* SYyyModelTestViewController.h */,
+				16D6FBEB1F381CE300C4F312 /* SYyyModelTestViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -346,6 +354,8 @@
 				16E06A091F24485700DCBE3A /* SYTransitionAnimator.m */,
 				16E06A061F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.h */,
 				16E06A071F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m */,
+				16D6FBF31F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.h */,
+				16D6FBF41F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m */,
 			);
 			path = ViewControllerTransition;
 			sourceTree = "<group>";
@@ -520,11 +530,13 @@
 				16D412C11DFABEB700A33ADC /* NSArray+Log.m in Sources */,
 				16244D371DF7B8D200EF6BDB /* AppDelegate.m in Sources */,
 				16244D341DF7B8D200EF6BDB /* main.m in Sources */,
+				16D6FBF51F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m in Sources */,
 				16D84EE61E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m in Sources */,
 				16D412BE1DFABEB700A33ADC /* UILabel+Style.m in Sources */,
 				161374311F05223800135DD9 /* SYCellFactoryTestViewController.m in Sources */,
 				16E06A0E1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.m in Sources */,
 				16D412BC1DFABEB700A33ADC /* UIColor+Style.m in Sources */,
+				16D6FBEC1F381CE300C4F312 /* SYyyModelTestViewController.m in Sources */,
 				16E06A0D1F24485700DCBE3A /* SYTransitionAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
