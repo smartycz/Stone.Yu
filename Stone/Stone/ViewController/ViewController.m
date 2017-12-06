@@ -7,12 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "SYTableViewController.h"
 
 static const NSString *ViewControllerThreadTest = @"SYThreadTestViewController";
 static const NSString *ViewControllerRuntimeTest = @"SYRuntimeTestViewController";
 static const NSString *ViewControllerCellFactory = @"SYCellFactoryTestViewController";
 static const NSString *ViewControllerViewControllerTransition = @"SYViewControllerTransitionViewController";
 static const NSString *ViewControllerYYModel = @"SYyyModelTestViewController";
+static const NSString *ViewControllerTableViewController = @"SYTableViewController";
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -25,6 +27,11 @@ static const NSString *ViewControllerYYModel = @"SYyyModelTestViewController";
 
 - (void)initView
 {
+    UIImage *backButtonImage = [[UIImage imageNamed:@"backNewImage"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.navigationController.navigationBar.backIndicatorImage = backButtonImage;
+    self.navigationController.navigationBar.backIndicatorTransitionMaskImage = backButtonImage;
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:(UIBarButtonItemStylePlain) target:self action:nil];
+    
     [self.navigationItem setTitle:@"主页"];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
@@ -67,7 +74,11 @@ static const NSString *ViewControllerYYModel = @"SYyyModelTestViewController";
     if (class) {
         UIViewController *viewController = [[NSClassFromString(classString) alloc] init];
         [viewController.navigationItem setTitle:dic[classString]];
-        [self.navigationController pushViewController:viewController animated:YES];
+        if ([viewController isKindOfClass:[SYTableViewController class]]) {
+            [self.navigationController presentViewController:viewController animated:YES completion:nil];
+        } else {
+            [self.navigationController pushViewController:viewController animated:YES];
+        }
     }
 }
 
@@ -128,7 +139,8 @@ static const NSString *ViewControllerYYModel = @"SYyyModelTestViewController";
              @{ViewControllerRuntimeTest : @"运行时"},
              @{ViewControllerCellFactory : @"cell工厂"},
              @{ViewControllerViewControllerTransition : @"转场"},
-             @{ViewControllerYYModel : @"YYModel"}];
+             @{ViewControllerYYModel : @"YYModel"},
+             @{ViewControllerTableViewController : @"TableViewController"}];
 }
 
 @end

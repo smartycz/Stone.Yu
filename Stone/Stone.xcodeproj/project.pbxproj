@@ -35,13 +35,15 @@
 		16D412C21DFABEB700A33ADC /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D412B81DFABEB700A33ADC /* NSDictionary+Log.m */; };
 		16D6FBE91F34215700C4F312 /* UIImage+Editer.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6FBE81F34215700C4F312 /* UIImage+Editer.m */; };
 		16D6FBEC1F381CE300C4F312 /* SYyyModelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6FBEB1F381CE300C4F312 /* SYyyModelTestViewController.m */; };
-		16D6FBF51F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6FBF41F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m */; };
 		16D6FBF81F39D8DD00C4F312 /* SYTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6FBF71F39D8DC00C4F312 /* SYTableViewHeaderFooterView.m */; };
 		16D84ED61E2CB56800435213 /* SYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84ED51E2CB56800435213 /* SYModel.m */; };
 		16D84EDC1E2CC78A00435213 /* UIViewController+ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EDB1E2CC78A00435213 /* UIViewController+ClassName.m */; };
 		16D84EE01E2DC5AC00435213 /* SYMethodForwardTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EDF1E2DC5AC00435213 /* SYMethodForwardTest.m */; };
 		16D84EE31E2DC65700435213 /* SYReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EE21E2DC65700435213 /* SYReplacement.m */; };
 		16D84EE61E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D84EE51E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m */; };
+		16DE1E981FD697A8007DE3B0 /* SYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE1E971FD697A8007DE3B0 /* SYTableViewController.m */; };
+		16DE1E9B1FD69ECA007DE3B0 /* SYRightMoveToLeftTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE1E9A1FD69ECA007DE3B0 /* SYRightMoveToLeftTransitionAnimator.m */; };
+		16DE1E9E1FD6B433007DE3B0 /* SYTableViewPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE1E9D1FD6B433007DE3B0 /* SYTableViewPresentationController.m */; };
 		16E06A0C1F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E06A071F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m */; };
 		16E06A0D1F24485700DCBE3A /* SYTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E06A091F24485700DCBE3A /* SYTransitionAnimator.m */; };
 		16E06A0E1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E06A0B1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.m */; };
@@ -108,8 +110,6 @@
 		16D6FBE81F34215700C4F312 /* UIImage+Editer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Editer.m"; sourceTree = "<group>"; };
 		16D6FBEA1F381CE300C4F312 /* SYyyModelTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYyyModelTestViewController.h; sourceTree = "<group>"; };
 		16D6FBEB1F381CE300C4F312 /* SYyyModelTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYyyModelTestViewController.m; sourceTree = "<group>"; };
-		16D6FBF31F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAlertControllerTransitionAnimator.h; sourceTree = "<group>"; };
-		16D6FBF41F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlertControllerTransitionAnimator.m; sourceTree = "<group>"; };
 		16D6FBF61F39D8DC00C4F312 /* SYTableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTableViewHeaderFooterView.h; sourceTree = "<group>"; };
 		16D6FBF71F39D8DC00C4F312 /* SYTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTableViewHeaderFooterView.m; sourceTree = "<group>"; };
 		16D84ED41E2CB56800435213 /* SYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYModel.h; sourceTree = "<group>"; };
@@ -122,6 +122,12 @@
 		16D84EE21E2DC65700435213 /* SYReplacement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYReplacement.m; sourceTree = "<group>"; };
 		16D84EE41E2DF8C600435213 /* SYMethodSwizzlingTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMethodSwizzlingTestViewController.h; sourceTree = "<group>"; };
 		16D84EE51E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMethodSwizzlingTestViewController.m; sourceTree = "<group>"; };
+		16DE1E961FD697A8007DE3B0 /* SYTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYTableViewController.h; sourceTree = "<group>"; };
+		16DE1E971FD697A8007DE3B0 /* SYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYTableViewController.m; sourceTree = "<group>"; };
+		16DE1E991FD69ECA007DE3B0 /* SYRightMoveToLeftTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRightMoveToLeftTransitionAnimator.h; sourceTree = "<group>"; };
+		16DE1E9A1FD69ECA007DE3B0 /* SYRightMoveToLeftTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRightMoveToLeftTransitionAnimator.m; sourceTree = "<group>"; };
+		16DE1E9C1FD6B433007DE3B0 /* SYTableViewPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYTableViewPresentationController.h; sourceTree = "<group>"; };
+		16DE1E9D1FD6B433007DE3B0 /* SYTableViewPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYTableViewPresentationController.m; sourceTree = "<group>"; };
 		16E06A061F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPictureBroswerTransitionAnimator.h; sourceTree = "<group>"; };
 		16E06A071F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPictureBroswerTransitionAnimator.m; sourceTree = "<group>"; };
 		16E06A081F24485700DCBE3A /* SYTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTransitionAnimator.h; sourceTree = "<group>"; };
@@ -161,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				161374331F05229200135DD9 /* cellModel */,
-				161374341F05229200135DD9 /* CellView */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -173,13 +178,6 @@
 				161374391F05246200135DD9 /* SYCell1Model.m */,
 			);
 			path = cellModel;
-			sourceTree = "<group>";
-		};
-		161374341F05229200135DD9 /* CellView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CellView;
 			sourceTree = "<group>";
 		};
 		16244D261DF7B8D200EF6BDB = {
@@ -253,6 +251,8 @@
 				168101981F2204F3001DDF19 /* SYPictureBroswertViewController.m */,
 				16D6FBEA1F381CE300C4F312 /* SYyyModelTestViewController.h */,
 				16D6FBEB1F381CE300C4F312 /* SYyyModelTestViewController.m */,
+				16DE1E961FD697A8007DE3B0 /* SYTableViewController.h */,
+				16DE1E971FD697A8007DE3B0 /* SYTableViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -344,8 +344,10 @@
 				16E06A091F24485700DCBE3A /* SYTransitionAnimator.m */,
 				16E06A061F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.h */,
 				16E06A071F24485700DCBE3A /* SYPictureBroswerTransitionAnimator.m */,
-				16D6FBF31F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.h */,
-				16D6FBF41F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m */,
+				16DE1E991FD69ECA007DE3B0 /* SYRightMoveToLeftTransitionAnimator.h */,
+				16DE1E9A1FD69ECA007DE3B0 /* SYRightMoveToLeftTransitionAnimator.m */,
+				16DE1E9C1FD6B433007DE3B0 /* SYTableViewPresentationController.h */,
+				16DE1E9D1FD6B433007DE3B0 /* SYTableViewPresentationController.m */,
 			);
 			path = ViewControllerTransition;
 			sourceTree = "<group>";
@@ -498,8 +500,10 @@
 				168101951F21DE1B001DDF19 /* BKAlertModalTransitionDelegate.m in Sources */,
 				168101961F21DE1B001DDF19 /* BKAlertPresentationController.m in Sources */,
 				1613742B1F051A8A00135DD9 /* SYCellModel.m in Sources */,
+				16DE1E9E1FD6B433007DE3B0 /* SYTableViewPresentationController.m in Sources */,
 				16D84EE01E2DC5AC00435213 /* SYMethodForwardTest.m in Sources */,
 				1681018D1F21D97E001DDF19 /* SYViewControllerTransitionViewController.m in Sources */,
+				16DE1E981FD697A8007DE3B0 /* SYTableViewController.m in Sources */,
 				16D84EE31E2DC65700435213 /* SYReplacement.m in Sources */,
 				1613742E1F051D8C00135DD9 /* SYTableViewCell.m in Sources */,
 				16D6FBF81F39D8DD00C4F312 /* SYTableViewHeaderFooterView.m in Sources */,
@@ -518,8 +522,8 @@
 				168CB64F1E00F6A30062804B /* NSString+MD5.m in Sources */,
 				16D412C11DFABEB700A33ADC /* NSArray+Log.m in Sources */,
 				16244D371DF7B8D200EF6BDB /* AppDelegate.m in Sources */,
+				16DE1E9B1FD69ECA007DE3B0 /* SYRightMoveToLeftTransitionAnimator.m in Sources */,
 				16244D341DF7B8D200EF6BDB /* main.m in Sources */,
-				16D6FBF51F39A84D00C4F312 /* SYAlertControllerTransitionAnimator.m in Sources */,
 				16D84EE61E2DF8C600435213 /* SYMethodSwizzlingTestViewController.m in Sources */,
 				16D412BE1DFABEB700A33ADC /* UILabel+Style.m in Sources */,
 				16E06A0E1F24485700DCBE3A /* SYViewControllerTransitioningDelegate.m in Sources */,

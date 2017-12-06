@@ -10,7 +10,6 @@
 #import "SYViewControllerTransitioningDelegate.h"
 
 #define kTransitionAnimatorA @"SYPictureBroswerTransitionAnimator"
-#define kTransitionAnimatorB @"SYAlertControllerTransitionAnimator"
 
 @interface SYPictureBroswertViewController () <SYTransitionAnimatorDataSource>
 

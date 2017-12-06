@@ -7,6 +7,7 @@
 //
 
 #import "SYViewControllerTransitioningDelegate.h"
+#import "SYTableViewPresentationController.h"
 
 #define kAnimateDuration 0.35;
 
@@ -74,7 +75,7 @@
 
 - (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(nullable UIViewController *)presenting sourceViewController:(UIViewController *)source NS_AVAILABLE_IOS(8_0)
 {
-    return nil;
+    return [[SYTableViewPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
 }
 
 @end

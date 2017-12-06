@@ -13,6 +13,7 @@
 @interface SYViewControllerTransitioningDelegate : NSObject <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, weak) id<SYTransitionAnimatorDataSource> dataSource;
+@property (nonatomic, strong) __kindof UIPresentationController *presentationController;
 
 - (instancetype)initWithAnimationClassString:(NSString *)animationClass;
 - (instancetype)initWithAnimationClassString:(NSString *)animationClass animatDuration:(NSTimeInterval)duration;

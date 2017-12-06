@@ -42,6 +42,11 @@ static const NSString *SelectorNameClassMethodTest = @"classMethodTest";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UIImage *backButtonImage = [[UIImage imageNamed:@"backNewImage"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.navigationController.navigationBar.backIndicatorImage = backButtonImage;
+    self.navigationController.navigationBar.backIndicatorTransitionMaskImage = backButtonImage;
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:(UIBarButtonItemStylePlain) target:self action:nil];
     
     [self initView];
     [self initData];

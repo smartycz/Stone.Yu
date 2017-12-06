@@ -33,5 +33,6 @@
 #import <BlocksKit.h>
 #import <BlocksKit+UIKit.h>
 #import <YYModel.h>
+#import <Masonry.h>
 
 #endif /* PrefixHeader_pch */
