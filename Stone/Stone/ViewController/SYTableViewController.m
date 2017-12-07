@@ -75,6 +75,7 @@ typedef enum : NSInteger {
     if (self = [super init]) {
         self.modalPresentationStyle = UIModalPresentationCustom;
         self.transitioningDelegate = self.transitionDelegate;
+        self.modalPresentationCapturesStatusBarAppearance = YES;
     }
     return self;
 }
@@ -91,6 +92,11 @@ typedef enum : NSInteger {
     pan.delegate = self;
     [self.view addGestureRecognizer:pan];
 }
+
+//- (BOOL)prefersStatusBarHidden
+//{
+//    return YES;
+//}
 
 - (void)panGestureRecognizer:(UIPanGestureRecognizer *)panGestureRecognizer{
     CGPoint translation = [panGestureRecognizer translationInView:UIApplication.sharedApplication.delegate.window];

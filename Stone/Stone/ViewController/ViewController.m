@@ -64,6 +64,11 @@ static const NSString *ViewControllerTableViewController = @"SYTableViewControll
     [super viewDidLayoutSubviews];
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 #pragma mark - Private Method
 - (void)gotoViewController:(NSIndexPath *)indexPath
 {

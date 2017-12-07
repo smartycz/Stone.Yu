@@ -33,9 +33,16 @@
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         if (toViewController.beingPresented) {
             toView.frame = targetRect;
+            
+            fromView.left -= 50;
+            CGAffineTransform transform = CGAffineTransformScale(fromView.transform, 0.95, 0.95);
+            fromView.transform = transform;
         }
         else if (fromViewController.beingDismissed) {
             fromView.frame = originRect;
+            
+            toView.left += 50;
+            toView.transform = fromView.transform;
         }
     } completion:^(BOOL finished) {
         if (finished) {
