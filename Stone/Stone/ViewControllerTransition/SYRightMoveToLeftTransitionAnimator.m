@@ -34,14 +34,14 @@
         if (toViewController.beingPresented) {
             toView.frame = targetRect;
             
-            fromView.left -= 50;
+            fromView.left += 5;
             CGAffineTransform transform = CGAffineTransformScale(fromView.transform, 0.95, 0.95);
             fromView.transform = transform;
         }
         else if (fromViewController.beingDismissed) {
             fromView.frame = originRect;
             
-            toView.left += 50;
+            toView.left -= 5;
             toView.transform = fromView.transform;
         }
     } completion:^(BOOL finished) {
