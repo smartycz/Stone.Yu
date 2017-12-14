@@ -12,55 +12,6 @@
 
 #import <UIKit/UIGestureRecognizerSubclass.h>
 
-typedef enum : NSInteger {
-    Vertical,
-    Horizontal
-} PanDirection;
-
-@interface PanDirectionGestureRecognizer : UIPanGestureRecognizer {
-    PanDirection direction;
-}
-
--(id)initWithTarget:(id)target action:(SEL)action andDirection:(PanDirection) panDirections;
-
-@end
-
-@implementation PanDirectionGestureRecognizer
-
--(id)initWithTarget:(id)target action:(SEL)action andDirection:(PanDirection) panDirections{
-    if(self = [super initWithTarget:target action:action]){
-        direction = panDirections;
-    }
-    return self;
-}
-
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesMoved:touches withEvent:event];
-    if(self.state == UIGestureRecognizerStateBegan){
-        CGPoint velocity =  [self velocityInView:self.view];
-        switch (direction) {
-            case Horizontal: {
-                if (fabs(velocity.y) > fabs(velocity.x)) {
-                    self.state = UIGestureRecognizerStateCancelled;
-                }
-            }
-                break;
-                
-            case Vertical: {
-                if (fabs(velocity.x) > fabs(velocity.y)) {
-                    self.state = UIGestureRecognizerStateCancelled;
-                }
-            }
-                break;
-                
-            default:
-                break;
-        }
-    }
-}
-
-@end
-
 @interface SYTableViewController () <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) SYViewControllerTransitioningDelegate *transitionDelegate;
@@ -88,9 +39,9 @@ typedef enum : NSInteger {
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
-    PanDirectionGestureRecognizer *pan = [[PanDirectionGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognizer:) andDirection:Horizontal];
-    pan.delegate = self;
-    [self.view addGestureRecognizer:pan];
+//    PanDirectionGestureRecognizer *pan = [[PanDirectionGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognizer:) andDirection:Horizontal];
+//    pan.delegate = self;
+//    [self.view addGestureRecognizer:pan];
 }
 
 //- (BOOL)prefersStatusBarHidden
@@ -98,7 +49,8 @@ typedef enum : NSInteger {
 //    return YES;
 //}
 
-- (void)panGestureRecognizer:(UIPanGestureRecognizer *)panGestureRecognizer{
+- (void)panGestureRecognizer:(UIPanGestureRecognizer *)panGestureRecognizer
+{
     CGPoint translation = [panGestureRecognizer translationInView:UIApplication.sharedApplication.delegate.window];
     
     CGFloat left = self.view.left + translation.x;

@@ -34,15 +34,15 @@
         if (toViewController.beingPresented) {
             toView.frame = targetRect;
             
-            fromView.left += 5;
-            CGAffineTransform transform = CGAffineTransformScale(fromView.transform, 0.95, 0.95);
-            fromView.transform = transform;
+            fromView.transform = CGAffineTransformMakeScale(0.95, 0.95);
+//            fromView.transform = CGAffineTransformScale(fromView.transform, 0.95, 0.95);;
         }
         else if (fromViewController.beingDismissed) {
             fromView.frame = originRect;
             
-            toView.left -= 5;
-            toView.transform = fromView.transform;
+            toView.transform = CGAffineTransformIdentity;
+//            toView.transform = CGAffineTransformScale(toView.transform, 1, 1);
+//            toView.transform = fromView.transform;
         }
     } completion:^(BOOL finished) {
         if (finished) {

@@ -8,6 +8,7 @@
 
 #import "SYViewControllerTransitioningDelegate.h"
 #import "SYTableViewPresentationController.h"
+#import "SYInteractiveTransition.h"
 
 #define kAnimateDuration 0.35;
 
@@ -15,6 +16,8 @@
 
 @property (nonatomic, copy) NSString *animationClass;
 @property (nonatomic) NSTimeInterval duration;
+
+@property (nonatomic, strong) SYInteractiveTransition *interactionController;
 
 @end
 
@@ -54,6 +57,7 @@
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
     SYTransitionAnimator *animator = [SYTransitionAnimator animationControllerWithAnimationClassString:self.animationClass animateDuration:self.duration animatorDataSource:self.dataSource];
+    [self.interactionController wireToViewController:presented];
     return animator;
 }
 
@@ -63,19 +67,28 @@
     return animator;
 }
 
-- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator
-{
-    return nil;
-}
-
+//- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator
+//{
+//    return [SYInteractiveTransition new];
+//}
+//
 - (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator
 {
-    return nil;
+    return self.interactionController.interacting ? self.interactionController : nil;
 }
 
 - (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(nullable UIViewController *)presenting sourceViewController:(UIViewController *)source NS_AVAILABLE_IOS(8_0)
 {
     return [[SYTableViewPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+}
+
+- (SYInteractiveTransition *)interactionController
+{
+    if (!_interactionController) {
+        _interactionController = [SYInteractiveTransition new];
+    }
+    
+    return _interactionController;
 }
 
 @end

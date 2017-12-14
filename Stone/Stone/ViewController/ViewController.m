@@ -42,6 +42,9 @@ static const NSString *ViewControllerTableViewController = @"SYTableViewControll
     [super viewDidLoad];
     
     [self initView];
+    self.navigationController.navigationBar.translucent = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self forbiddenAdjustsScrollViewInsets:self.tableView];
     
     [ViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated){
         NSLog(@"aspectInfo = %@ \n aspectInfo.instance = %@ \n aspectInfo.originalInvocation = %@ \n", aspectInfo, aspectInfo.instance, aspectInfo.originalInvocation);
@@ -67,6 +70,21 @@ static const NSString *ViewControllerTableViewController = @"SYTableViewControll
 - (BOOL)prefersStatusBarHidden
 {
     return NO;
+}
+
+- (void)forbiddenAdjustsScrollViewInsets:(UIScrollView *)scrollview{
+    _Pragma("clang diagnostic push")
+    _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"")
+    if ([UIScrollView instancesRespondToSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:")]) {
+        if (@available(iOS 11.0, *)) {
+            [scrollview performSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:") withObject:@(UIScrollViewContentInsetAdjustmentNever)];
+        } else {
+            // Fallback on earlier versions
+        }
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    _Pragma("clang diagnostic pop")
 }
 
 #pragma mark - Private Method
